@@ -8,6 +8,7 @@ const footerLinks = {
     { name: "Join the Core Team", href: "/next-steps/join-team" },
   ],
   media: [
+    { name: "Events", href: "/events" },
     { name: "Podcast", href: "/media/podcast" },
     { name: "YouTube", href: "https://www.youtube.com/@freewaychurch", external: true },
     { name: "Freeway Report", href: "/media/freeway-report" },
