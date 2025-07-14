@@ -105,7 +105,7 @@ export async function GET() {
       start: event.start?.dateTime || event.start?.date || now.toISOString(),
       end: event.end?.dateTime || event.end?.date || now.toISOString(),
       location: event.location || '',
-      image: extractImageFromDescription(event.description) || generateDefaultImage(event.summary || 'Event')
+      image: extractImageFromDescription(event.description || '') || generateDefaultImage(event.summary || 'Event')
     }));
 
     return NextResponse.json(formattedEvents);

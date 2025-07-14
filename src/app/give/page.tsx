@@ -52,8 +52,8 @@ export default function GivePage() {
             <div className="max-w-4xl mx-auto text-center">
               <h2 className="text-section font-bold mb-8">Why We Give</h2>
               <p className="text-lg text-neutral-dark-gray mb-8">
-                Giving is an act of worship and a practical way to participate in God's work. 
-                When you give to Freeway Church, you're investing in transformed lives, 
+                Giving is an act of worship and a practical way to participate in God&apos;s work. 
+                When you give to Freeway Church, you&apos;re investing in transformed lives, 
                 strengthened families, and a thriving community.
               </p>
               
@@ -160,7 +160,7 @@ export default function GivePage() {
           <div className="section-container text-center">
             <h2 className="text-section font-bold mb-4 text-white">Questions About Giving?</h2>
             <p className="text-xl mb-8 max-w-2xl mx-auto text-neutral-light-gray">
-              We're here to help! Contact us if you have any questions about giving or need assistance.
+              We&apos;re here to help! Contact us if you have any questions about giving or need assistance.
             </p>
             <Link href="/connect" className="btn-primary bg-accent-teal hover:bg-accent-teal-dark">
               Contact Us

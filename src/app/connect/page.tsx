@@ -245,7 +245,7 @@ export default function ConnectPage() {
           <div className="section-container text-center">
             <h2 className="text-section font-bold mb-4 text-white">Ready to Take the Next Step?</h2>
             <p className="text-xl mb-8 max-w-2xl mx-auto text-neutral-light-gray">
-              We're excited to help you find your place in the Freeway Church family.
+              We&apos;re excited to help you find your place in the Freeway Church family.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/about" className="btn-primary bg-accent-teal hover:bg-accent-teal-dark">

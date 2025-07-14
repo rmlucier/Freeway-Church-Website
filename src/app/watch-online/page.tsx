@@ -144,7 +144,7 @@ export default function WatchOnlinePage() {
           <div className="section-container text-center">
             <h2 className="text-section font-bold mb-4 text-white">First Time Watching?</h2>
             <p className="text-xl mb-8 max-w-2xl mx-auto text-neutral-light-gray">
-              We'd love to connect with you! Let us know you joined us online.
+              We&apos;d love to connect with you! Let us know you joined us online.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/connect" className="btn-primary bg-accent-teal hover:bg-accent-teal-dark">
