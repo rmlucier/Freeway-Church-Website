@@ -43,4 +43,35 @@
   .card {
     @apply bg-white rounded-lg shadow-card overflow-hidden transition-transform duration-200 hover:scale-105;
   }
+
+  /* Swiper navigation button styles */
+  .events-carousel .swiper-button-next,
+  .events-carousel .swiper-button-prev {
+    color: #2563eb;
+    background: white;
+    border-radius: 50%;
+    width: 44px;
+    height: 44px;
+    margin-top: -22px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .events-carousel .swiper-button-next:after,
+  .events-carousel .swiper-button-prev:after {
+    font-size: 18px;
+    font-weight: 700;
+  }
+
+  .events-carousel .swiper-button-next:hover,
+  .events-carousel .swiper-button-prev:hover {
+    background: #f3f4f6;
+  }
+
+  /* Line clamp utility */
+  .line-clamp-3 {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+  }
 }
