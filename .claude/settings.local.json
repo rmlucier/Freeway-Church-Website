@@ -1,0 +1,26 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npx create-next-app:*)",
+      "Bash(mkdir:*)",
+      "Bash(npm init:*)",
+      "Bash(ls:*)",
+      "Bash(npm install:*)",
+      "Bash(npm run dev:*)",
+      "Bash(mv:*)",
+      "Bash(rm:*)",
+      "Bash(find:*)",
+      "Bash(npx vercel:*)",
+      "Bash(npm run build:*)",
+      "Bash(npm run lint)",
+      "Bash(npx tsc:*)",
+      "Bash(node:*)",
+      "Bash(npm cache clean:*)",
+      "Bash(curl:*)",
+      "Bash(lsof:*)",
+      "Bash(npx next:*)",
+      "Bash(npm run start:*)"
+    ],
+    "deny": []
+  }
+}
