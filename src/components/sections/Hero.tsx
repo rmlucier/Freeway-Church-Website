@@ -6,9 +6,15 @@ import Link from "next/link";
 export default function Hero() {
   return (
     <section className="relative h-screen min-h-[600px] flex items-center justify-center overflow-hidden">
-      {/* Background Video/Image Placeholder */}
+      {/* Background Image */}
       <div className="absolute inset-0 bg-primary-dark">
-        <div className="absolute inset-0 bg-black/40" />
+        <div 
+          className="absolute inset-0 bg-cover bg-center"
+          style={{
+            backgroundImage: `url('/images/youtube-preview.png')`,
+          }}
+        />
+        <div className="absolute inset-0 bg-black/50" />
       </div>
 
       {/* Content */}

@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 
@@ -31,9 +32,13 @@ export default function Header() {
       <nav className="section-container">
         <div className="flex items-center justify-between h-16 md:h-20">
           <Link href="/" className="flex items-center">
-            <h1 className={`text-2xl font-bold ${isScrolled ? "text-primary" : "text-white"}`}>
-              Freeway Church
-            </h1>
+            <Image
+              src={isScrolled ? "/images/logo-black.png" : "/images/logo-white-horizontal.png"}
+              alt="Freeway Church"
+              width={200}
+              height={50}
+              className="h-8 w-auto md:h-10"
+            />
           </Link>
 
           {/* Desktop Navigation */}

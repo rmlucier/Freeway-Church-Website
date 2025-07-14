@@ -3,30 +3,31 @@
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import Link from "next/link";
+import Image from "next/image";
 
 const programs = [
   {
     title: "SUNDAY SERVICE",
     description: "A worship service on Sunday mornings at 10am.",
-    image: "/images/sunday-service.jpg",
+    image: "/images/youtube-preview.png",
     link: "/services",
   },
   {
     title: "KIDSWAY",
     description: "Children's program (K-5th grade) for learning and worship.",
-    image: "/images/kidsway.jpg",
+    image: "/images/logo-white-stack.png",
     link: "/kidsway",
   },
   {
     title: "FELLOWSHIP",
     description: "Extended time for fellowship after Sunday service.",
-    image: "/images/fellowship.jpg",
+    image: "/images/youtube-preview.png",
     link: "/connect",
   },
   {
     title: "FREEWAY YOUTH",
     description: "FWY (6th-12th grade) meets Sunday evenings.",
-    image: "/images/youth.jpg",
+    image: "/images/logo-white-stack.png",
     link: "/youth",
   },
 ];
@@ -63,7 +64,12 @@ export default function Programs() {
               className="card group"
             >
               <div className="aspect-video bg-neutral-light-gray relative overflow-hidden">
-                {/* Image placeholder */}
+                <Image
+                  src={program.image}
+                  alt={program.title}
+                  fill
+                  className="object-cover"
+                />
                 <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/50" />
               </div>
               <div className="p-6">

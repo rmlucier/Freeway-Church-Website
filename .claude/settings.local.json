@@ -19,7 +19,9 @@
       "Bash(curl:*)",
       "Bash(lsof:*)",
       "Bash(npx next:*)",
-      "Bash(npm run start:*)"
+      "Bash(npm run start:*)",
+      "Bash(git remote add:*)",
+      "WebFetch(domain:freeway.church)"
     ],
     "deny": []
   }

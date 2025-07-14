@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     siteName: "Freeway Church",
     images: [
       {
-        url: "/og-image.jpg",
+        url: "/images/logo-white-horizontal.png",
         width: 1200,
         height: 630,
         alt: "Freeway Church",
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Freeway Church - Connect, Cultivate, Contribute",
     description: "Welcome to Freeway Church. Join us for worship services every Sunday at 10am.",
-    images: ["/og-image.jpg"],
+    images: ["/images/logo-white-horizontal.png"],
   },
   robots: {
     index: true,
