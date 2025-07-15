@@ -28,7 +28,9 @@ export default function Hero() {
             WELCOME TO CHURCH
           </h1>
           <p className="text-xl md:text-2xl mb-12 max-w-4xl mx-auto font-light leading-relaxed text-neutral-light-gray">
-            Connect with God and community. Cultivate spiritual growth. Contribute to the world around you.
+            Join us for an absolutely dynamic worship experience! This is our "One More" season - 
+            where we Connect with God and community, Cultivate authentic spiritual growth, and 
+            Contribute to transforming lives in our community and beyond.
           </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
             <Link href="/about" className="bg-primary text-white px-10 py-4 text-lg font-normal hover:bg-primary-dark transition-colors rounded-full">

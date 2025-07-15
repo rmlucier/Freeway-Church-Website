@@ -6,28 +6,28 @@ import Image from "next/image";
 
 const leaders = [
   {
-    name: "Pastor [Name]",
+    name: "Pastor Roy Lucier",
     role: "Lead Pastor",
     image: "/images/church-event.jpeg",
-    description: "Leading our congregation with passion and dedication to God's word."
+    description: "Leading with absolute dynamic passion for our 'One More' vision - connecting people to God, cultivating authentic disciples, and contributing to community transformation."
   },
   {
     name: "Pastor [Name]",
     role: "Associate Pastor",
     image: "/images/church-event.jpeg",
-    description: "Overseeing discipleship and spiritual growth ministries."
+    description: "Partnering in discipleship and spiritual growth ministries to help every person reach their full potential in Christ."
   },
   {
     name: "[Name]",
     role: "Youth Pastor",
     image: "/images/youth-ministry.jpg",
-    description: "Empowering the next generation to follow Jesus with purpose."
+    description: "Empowering the next generation to follow Jesus with purpose and passion, building tomorrow's leaders today."
   },
   {
     name: "[Name]",
     role: "Worship Leader",
     image: "/images/sunday-service.jpeg",
-    description: "Leading our community in heartfelt worship and praise."
+    description: "Creating an atmosphere where hearts connect with Heaven through authentic, Spirit-filled worship experiences."
   }
 ];
 
@@ -51,8 +51,9 @@ export default function Leadership() {
             Meet Our <span className="text-primary">Leadership</span>
           </h2>
           <p className="text-xl md:text-2xl text-neutral-light-gray max-w-4xl mx-auto font-light leading-relaxed">
-            Our dedicated team of pastors and staff are committed to guiding our congregation 
-            and fostering a loving environment where everyone can grow in their faith journey.
+            I am so excited about our incredible leadership team! Each person brings absolute 
+            dynamic passion to help you Connect with God, Cultivate your faith, and Contribute 
+            to transforming lives in our community and beyond.
           </p>
         </motion.div>
 

@@ -36,13 +36,15 @@ export default function AboutUs() {
               About <span className="text-primary">Freeway Church</span>
             </h2>
             <p className="text-xl md:text-2xl text-neutral-light-gray mb-8 font-light leading-relaxed">
-              At Freeway Church, we believe in creating a vibrant community where everyone feels welcome. 
-              Our mission is to Connect people to God and each other, Cultivate spiritual growth through 
-              discipleship, and empower them to Contribute to the world around them.
+              I am so excited about what God is doing at Freeway Church! We are absolutely dynamic in our 
+              mission to Connect people to God and each other, Cultivate spiritual growth through authentic 
+              discipleship, and empower every person to Contribute to the world around them.
             </p>
             <p className="text-lg md:text-xl text-neutral-light-gray mb-12 font-light leading-relaxed">
-              Whether you're taking your first steps in faith or have been on the journey for years, 
-              you'll find a place to grow, serve, and belong at Freeway Church.
+              This is our "One More" season - reaching one more person, baptizing one more believer, 
+              and creating one more opportunity for transformation. Whether you're just beginning your 
+              faith journey or you've been walking with Jesus for years, you'll discover incredible 
+              opportunities to grow, serve, and make a lasting impact right here at Freeway Church.
             </p>
             <Link 
               href="/about" 

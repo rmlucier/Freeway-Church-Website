@@ -27,8 +27,8 @@ export default function Location() {
               <div>
                 <h3 className="text-xl font-semibold mb-2 text-white">Address</h3>
                 <p className="text-lg">
-                  [Church Address]<br />
-                  [City, State ZIP]
+                  31555 Groesbeck Hwy<br />
+                  Fraser, MI 48026
                 </p>
               </div>
               <div>
@@ -41,8 +41,8 @@ export default function Location() {
               </div>
               <div>
                 <h3 className="text-xl font-semibold mb-2 text-white">Contact</h3>
-                <p>Phone: [Phone Number]</p>
-                <p>Email: [Email Address]</p>
+                <p>Phone: (586) 293-4150</p>
+                <p>Email: info@freewaymovement.org</p>
               </div>
             </div>
           </motion.div>
