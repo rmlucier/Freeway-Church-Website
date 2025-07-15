@@ -16,6 +16,12 @@ const leaders = [
     role: "Associate Pastor",
     image: "/images/royand Elissa.jpg",
     description: "Leading worship with passion and overseeing volunteer management and administrative operations. Elissa brings incredible energy to helping every person discover their purpose and serve with excellence."
+  },
+  {
+    name: "Jamie & Nate",
+    role: "Freeway Youth Leaders",
+    image: "/images/teaching.jpeg",
+    description: "Passionately leading Freeway Youth to help the next generation discover their purpose in Christ and develop into tomorrow's leaders through dynamic worship, relevant teaching, and authentic community."
   }
 ];
 
@@ -45,7 +51,7 @@ export default function Leadership() {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
           {leaders.map((leader, index) => (
             <motion.div
               key={leader.name}
