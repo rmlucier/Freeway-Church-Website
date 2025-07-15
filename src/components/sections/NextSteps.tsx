@@ -7,39 +7,33 @@ import Link from "next/link";
 const steps = [
   {
     title: "PRAYER",
-    description: "Submit a prayer request or join our prayer team",
-    icon: "🙏",
-    link: "/next-steps/prayer",
+    description: "Submit a prayer request",
+    link: "https://freewaychurch.churchcenter.com/people/forms/585698",
   },
   {
     title: "FOLLOW JESUS",
-    description: "Learn about faith and take your next step",
-    icon: "✝️",
-    link: "/next-steps/follow-jesus",
+    description: "Learn about faith",
+    link: "https://freewaychurch.churchcenter.com/people/forms/585705",
   },
   {
     title: "CONNECT",
-    description: "Find community and build relationships",
-    icon: "🤝",
-    link: "/connect",
+    description: "Find community",
+    link: "https://freewaychurch.churchcenter.com/people/forms/274372",
   },
   {
     title: "GIVE",
-    description: "Support the mission of Freeway Church",
-    icon: "💝",
-    link: "/give",
+    description: "Support our mission",
+    link: "https://freewaychurch.churchcenter.com/giving",
   },
   {
-    title: "JOIN THE CORE TEAM",
-    description: "Serve and make a difference",
-    icon: "🎯",
-    link: "/next-steps/join-team",
+    title: "JOIN TEAM",
+    description: "Serve and help",
+    link: "https://freewaychurch.churchcenter.com/people/forms/585690",
   },
   {
     title: "WATCH ONLINE",
-    description: "Join us live or watch past messages",
-    icon: "📺",
-    link: "/watch-online",
+    description: "Join us live",
+    link: "https://www.youtube.com/@freewaymedia/streams",
   },
 ];
 
@@ -50,7 +44,7 @@ export default function NextSteps() {
   });
 
   return (
-    <section className="py-16 md:py-24 bg-primary text-white">
+    <section className="py-16 md:py-24 bg-white text-neutral-black">
       <div className="section-container">
         <motion.div
           ref={ref}
@@ -59,13 +53,13 @@ export default function NextSteps() {
           transition={{ duration: 0.6 }}
           className="text-center mb-12"
         >
-          <h2 className="text-section font-bold mb-4 text-white">NEXT STEPS</h2>
-          <p className="text-xl text-neutral-light-gray max-w-2xl mx-auto">
+          <h2 className="text-section font-bold mb-4 text-neutral-black">NEXT STEPS</h2>
+          <p className="text-xl text-neutral-dark-gray max-w-2xl mx-auto">
             Ready to take your next step? We&apos;re here to help you on your journey.
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
           {steps.map((step, index) => (
             <motion.div
               key={step.title}
@@ -75,11 +69,12 @@ export default function NextSteps() {
             >
               <Link
                 href={step.link}
-                className="block bg-white/10 backdrop-blur-sm rounded-lg p-6 hover:bg-white/20 transition-all duration-200 h-full"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block bg-neutral-off-white rounded-2xl p-4 hover:bg-neutral-light-gray transition-all duration-200 h-full border border-neutral-medium-gray"
               >
-                <div className="text-4xl mb-4">{step.icon}</div>
-                <h3 className="text-xl font-bold mb-2 text-white">{step.title}</h3>
-                <p className="text-neutral-light-gray">{step.description}</p>
+                <h3 className="text-sm font-semibold mb-1 text-neutral-black text-center">{step.title}</h3>
+                <p className="text-xs text-neutral-dark-gray text-center">{step.description}</p>
               </Link>
             </motion.div>
           ))}

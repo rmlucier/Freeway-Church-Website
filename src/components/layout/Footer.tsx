@@ -2,20 +2,20 @@ import Link from "next/link";
 
 const footerLinks = {
   connect: [
-    { name: "Prayer", href: "/next-steps/prayer" },
-    { name: "Follow Jesus", href: "/next-steps/follow-jesus" },
-    { name: "Connect", href: "/connect" },
-    { name: "Join the Core Team", href: "/next-steps/join-team" },
+    { name: "Prayer", href: "https://freewaychurch.churchcenter.com/people/forms/585698" },
+    { name: "Follow Jesus", href: "https://freewaychurch.churchcenter.com/people/forms/585705" },
+    { name: "Connect", href: "https://freewaychurch.churchcenter.com/people/forms/274372" },
+    { name: "Join the Core Team", href: "https://freewaychurch.churchcenter.com/people/forms/585690" },
   ],
   media: [
     { name: "Events", href: "/events" },
-    { name: "Podcast", href: "/media/podcast" },
-    { name: "YouTube", href: "https://www.youtube.com/@freewaychurch", external: true },
-    { name: "Freeway Report", href: "/media/freeway-report" },
+    { name: "Podcast", href: "https://open.spotify.com/show/1ClBK7hZzOSyfFhQYjpjMo", external: true },
+    { name: "YouTube", href: "https://www.youtube.com/channel/UCRrCQnXSguf6UYfNQORCN3Q", external: true },
+    { name: "Watch Online", href: "https://www.youtube.com/@freewaymedia/streams", external: true },
   ],
   social: [
-    { name: "Instagram", href: "https://www.instagram.com/freewaychurch", icon: "instagram" },
-    { name: "Facebook", href: "https://www.facebook.com/freewaychurch", icon: "facebook" },
+    { name: "Instagram", href: "https://instagram.com/freeway.church", icon: "instagram" },
+    { name: "Facebook", href: "https://www.facebook.com/www.freeway.church", icon: "facebook" },
   ],
 };
 
@@ -43,12 +43,14 @@ export default function Footer() {
             <ul className="space-y-2">
               {footerLinks.connect.map((link) => (
                 <li key={link.name}>
-                  <Link
+                  <a
                     href={link.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="text-neutral-light-gray hover:text-primary transition-colors"
                   >
                     {link.name}
-                  </Link>
+                  </a>
                 </li>
               ))}
             </ul>

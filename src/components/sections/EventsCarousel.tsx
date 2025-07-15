@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Pagination, Mousewheel, Keyboard } from 'swiper/modules';
+import { Navigation, Pagination, Keyboard, Autoplay } from 'swiper/modules';
 import { fetchCalendarEvents, CalendarEvent } from '@/lib/google-calendar';
 import EventCard from '@/components/ui/EventCard';
 
@@ -49,23 +49,27 @@ export default function EventsCarousel() {
   return (
     <div className="relative">
       <Swiper
-        modules={[Navigation, Pagination, Mousewheel, Keyboard]}
+        modules={[Navigation, Pagination, Keyboard, Autoplay]}
         spaceBetween={20}
         slidesPerView={1.1}
         navigation
-        mousewheel={true}
         keyboard={true}
+        autoplay={{
+          delay: 3000,
+          disableOnInteraction: false,
+          pauseOnMouseEnter: true,
+        }}
         breakpoints={{
           640: {
-            slidesPerView: 2.1,
+            slidesPerView: 1.8,
             spaceBetween: 20,
           },
           768: {
-            slidesPerView: 3.1,
+            slidesPerView: 2.5,
             spaceBetween: 30,
           },
           1024: {
-            slidesPerView: 4.25,
+            slidesPerView: 3.2,
             spaceBetween: 30,
           },
         }}

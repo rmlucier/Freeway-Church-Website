@@ -10,6 +10,22 @@ const services = [
   { time: "6:00p", title: "Freeway Youth", description: "Dynamic ministry for 6th-12th grade students" },
 ];
 
+function getServiceImage(title: string): string {
+  const lowerTitle = title.toLowerCase();
+  
+  if (lowerTitle.includes('prayer')) {
+    return '/images/prayer.jpeg';
+  } else if (lowerTitle.includes('worship') || lowerTitle.includes('service')) {
+    return '/images/sunday-service.jpeg';
+  } else if (lowerTitle.includes('fellowship')) {
+    return '/images/fellowship.jpeg';
+  } else if (lowerTitle.includes('youth')) {
+    return '/images/youth-ministry.jpg';
+  } else {
+    return '/images/church-event.jpeg';
+  }
+}
+
 export default function ServiceTimes() {
   const { ref, inView } = useInView({
     triggerOnce: true,
@@ -39,11 +55,17 @@ export default function ServiceTimes() {
               initial={{ opacity: 0, y: 30 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: index * 0.1 }}
-              className="bg-neutral-black p-6 text-center rounded-lg border border-neutral-dark-gray hover:border-primary transition-colors"
+              className="bg-neutral-black p-6 text-center rounded-lg border border-neutral-dark-gray hover:border-primary transition-colors relative overflow-hidden"
             >
-              <div className="text-primary text-3xl font-bold mb-2">{service.time}</div>
-              <h3 className="text-xl font-semibold mb-2 text-white">{service.title}</h3>
-              <p className="text-neutral-light-gray">{service.description}</p>
+              <div className="absolute inset-0 bg-gradient-to-br from-neutral-dark-gray to-neutral-black opacity-50"></div>
+              <div className="absolute inset-0 bg-cover bg-center opacity-30" style={{
+                backgroundImage: `url('${getServiceImage(service.title)}')`
+              }}></div>
+              <div className="relative z-10">
+                <div className="text-primary text-3xl font-bold mb-2">{service.time}</div>
+                <h3 className="text-xl font-semibold mb-2 text-white">{service.title}</h3>
+                <p className="text-neutral-light-gray">{service.description}</p>
+              </div>
             </motion.div>
           ))}
         </div>

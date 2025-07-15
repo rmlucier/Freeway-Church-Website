@@ -28,7 +28,7 @@ export default function EventCard({ event }: EventCardProps) {
   };
 
   return (
-    <div className="bg-neutral-near-black rounded-lg border border-neutral-dark-gray overflow-hidden hover:border-primary transition-all duration-300">
+    <div className="bg-neutral-near-black rounded-3xl border border-neutral-dark-gray overflow-hidden hover:border-primary transition-all duration-300">
       <div className="relative h-48 bg-neutral-dark-gray">
         {event.image ? (
           <Image

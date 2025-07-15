@@ -9,26 +9,26 @@ const programs = [
   {
     title: "SUNDAY SERVICE",
     description: "A worship service on Sunday mornings at 10am.",
-    image: "/images/youtube-preview.png",
-    link: "/services",
+    image: "/images/sunday-service.jpeg",
+    link: "/about",
   },
   {
     title: "KIDSWAY",
     description: "Children's program (K-5th grade) for learning and worship.",
-    image: "/images/logo-white-stack.png",
-    link: "/kidsway",
+    image: "/images/freewaychurchkidsway.jpeg",
+    link: "/about",
   },
   {
     title: "FELLOWSHIP",
     description: "Extended time for fellowship after Sunday service.",
-    image: "/images/youtube-preview.png",
+    image: "/images/fellowship.jpeg",
     link: "/connect",
   },
   {
     title: "FREEWAY YOUTH",
     description: "FWY (6th-12th grade) meets Sunday evenings.",
-    image: "/images/logo-white-stack.png",
-    link: "/youth",
+    image: "/images/youth-ministry.jpg",
+    link: "/about",
   },
 ];
 

@@ -27,7 +27,7 @@ function generateDefaultImage(title: string): string {
   // Generate a default image based on event type
   const lowerTitle = title.toLowerCase();
   
-  if (lowerTitle.includes('service') || lowerTitle.includes('worship')) {
+  if (lowerTitle.includes('sunday service') || lowerTitle.includes('worship service') || lowerTitle.includes('service') || lowerTitle.includes('worship')) {
     return '/images/sunday-service.jpeg';
   } else if (lowerTitle.includes('youth') || lowerTitle.includes('teen')) {
     return '/images/youth-ministry.jpg';

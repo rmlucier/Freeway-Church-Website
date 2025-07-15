@@ -2,8 +2,9 @@ import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import Hero from "@/components/sections/Hero";
 import EventsCarousel from "@/components/sections/EventsCarousel";
-import ServiceTimes from "@/components/sections/ServiceTimes";
-import Programs from "@/components/sections/Programs";
+import AboutUs from "@/components/sections/AboutUs";
+import Location from "@/components/sections/Location";
+import Leadership from "@/components/sections/Leadership";
 import NextSteps from "@/components/sections/NextSteps";
 
 export default function Home() {
@@ -23,8 +24,9 @@ export default function Home() {
             <EventsCarousel />
           </div>
         </section>
-        <ServiceTimes />
-        <Programs />
+        <AboutUs />
+        <Location />
+        <Leadership />
         <NextSteps />
       </main>
       <Footer />
