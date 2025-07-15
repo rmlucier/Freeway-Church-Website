@@ -28,7 +28,7 @@ export default function Hero() {
             WELCOME TO CHURCH
           </h1>
           <p className="text-xl md:text-2xl mb-12 max-w-4xl mx-auto font-light leading-relaxed text-neutral-light-gray">
-            Join us for an absolutely dynamic worship experience! This is our "One More" season - 
+            Join us for an absolutely dynamic worship experience! This is our &ldquo;One More&rdquo; season - 
             where we Connect with God and community, Cultivate authentic spiritual growth, and 
             Contribute to transforming lives in our community and beyond.
           </p>

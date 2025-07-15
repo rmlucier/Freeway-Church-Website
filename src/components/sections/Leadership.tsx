@@ -9,7 +9,7 @@ const leaders = [
     name: "Pastor Roy Lucier",
     role: "Lead Pastor",
     image: "/images/church-event.jpeg",
-    description: "Leading with absolute dynamic passion for our 'One More' vision - connecting people to God, cultivating authentic disciples, and contributing to community transformation."
+    description: "Leading with absolute dynamic passion for our \"One More\" vision - connecting people to God, cultivating authentic disciples, and contributing to community transformation."
   },
   {
     name: "Pastor [Name]",

@@ -19,7 +19,7 @@ export default function Home() {
               <h2 className="text-section font-bold mb-4 text-white">Around Freeway Church</h2>
               <p className="text-lg text-neutral-light-gray max-w-2xl mx-auto">
                 I am so excited about these incredible opportunities to Connect, Cultivate, and Contribute! 
-                Join us for events that will transform your life and help you reach "One More" in your community.
+                Join us for events that will transform your life and help you reach &ldquo;One More&rdquo; in your community.
               </p>
             </div>
             <EventsCarousel />

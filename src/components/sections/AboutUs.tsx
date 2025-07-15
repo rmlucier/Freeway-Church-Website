@@ -41,9 +41,9 @@ export default function AboutUs() {
               discipleship, and empower every person to Contribute to the world around them.
             </p>
             <p className="text-lg md:text-xl text-neutral-light-gray mb-12 font-light leading-relaxed">
-              This is our "One More" season - reaching one more person, baptizing one more believer, 
-              and creating one more opportunity for transformation. Whether you're just beginning your 
-              faith journey or you've been walking with Jesus for years, you'll discover incredible 
+              This is our &ldquo;One More&rdquo; season - reaching one more person, baptizing one more believer, 
+              and creating one more opportunity for transformation. Whether you&apos;re just beginning your 
+              faith journey or you&apos;ve been walking with Jesus for years, you&apos;ll discover incredible 
               opportunities to grow, serve, and make a lasting impact right here at Freeway Church.
             </p>
             <Link 
