@@ -77,6 +77,11 @@ Next.js website for Freeway Church with the following structure:
 - **Calendar Status**: Public with "See all event details" permissions
 - **API Route**: `/api/events` handles server-side Google Calendar API calls
 - **Packages**: googleapis, swiper for carousel functionality
+
+### Vercel Environment Variables
+For deployment, add these environment variables in Vercel dashboard:
+1. **Key**: `GOOGLE_CALENDAR_API_KEY` | **Value**: Your Google Calendar API key (regenerate in Google Cloud Console)
+2. **Key**: `GOOGLE_CALENDAR_ID` | **Value**: `c_md09veggphlh418qgt0vrr0420@group.calendar.google.com`
 - **Timezone**: America/Detroit
 
 ### Event Carousel Features
