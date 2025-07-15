@@ -27,38 +27,45 @@ export default function Location() {
               <div>
                 <h3 className="text-xl font-semibold mb-2 text-white">Address</h3>
                 <p className="text-lg">
-                  31555 Groesbeck Hwy<br />
-                  Fraser, MI 48026
+                  28900 B Drive North<br />
+                  Albion, MI 49224
                 </p>
               </div>
               <div>
                 <h3 className="text-xl font-semibold mb-2 text-white">Service Times</h3>
                 <div className="space-y-2">
-                  <p><strong>Sunday:</strong> 10:00 AM - Worship Service</p>
-                  <p><strong>Sunday:</strong> 6:00 PM - Freeway Youth</p>
-                  <p><strong>Wednesday:</strong> 7:00 PM - Prayer & Bible Study</p>
+                  <p><strong>Sunday:</strong> 9:15 AM - Pre-Service Prayer</p>
+                  <p><strong>Sunday:</strong> 10:00 AM - Main Worship Service</p>
+                  <p><strong>Sunday:</strong> 11:30 AM - Fellowship</p>
+                  <p><strong>Sunday:</strong> 6:00 PM - Youth</p>
+                  <p><strong>Sunday:</strong> 7:00 PM - Young Adults</p>
                 </div>
               </div>
               <div>
                 <h3 className="text-xl font-semibold mb-2 text-white">Contact</h3>
-                <p>Phone: (586) 293-4150</p>
-                <p>Email: info@freewaymovement.org</p>
+                <p>Phone: (517) 798-0571</p>
+                <p>Email: <a href="mailto:info@freeway.church" className="hover:text-primary transition-colors">info@freeway.church</a></p>
               </div>
             </div>
           </motion.div>
 
-          {/* Map Placeholder */}
+          {/* Map */}
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             animate={inView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
-            className="bg-neutral-dark-gray rounded-2xl h-96 flex items-center justify-center"
+            className="bg-neutral-dark-gray rounded-2xl overflow-hidden h-96"
           >
-            <div className="text-center text-neutral-light-gray">
-              <div className="text-6xl mb-4">📍</div>
-              <p className="text-lg">Interactive Map Coming Soon</p>
-              <p className="text-sm mt-2">Or search for us on Google Maps</p>
-            </div>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2955.123456789!2d-84.5472!3d42.2439!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2s28900+B+Drive+North%2C+Albion%2C+MI+49224!5e0!3m2!1sen!2sus!4v1234567890"
+              width="100%"
+              height="100%"
+              style={{ border: 0 }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title="Freeway Church Location"
+            />
           </motion.div>
         </div>
       </div>

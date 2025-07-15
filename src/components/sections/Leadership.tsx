@@ -12,10 +12,10 @@ const leaders = [
     description: "Leading with absolute dynamic passion for our \"One More\" vision - connecting people to God, cultivating authentic disciples, and contributing to community transformation."
   },
   {
-    name: "Pastor [Name]",
+    name: "Elissa Lucier",
     role: "Associate Pastor",
     image: "/images/church-event.jpeg",
-    description: "Partnering in discipleship and spiritual growth ministries to help every person reach their full potential in Christ."
+    description: "Leading worship with passion and overseeing volunteer management and administrative operations. Elissa brings incredible energy to helping every person discover their purpose and serve with excellence."
   },
   {
     name: "[Name]",

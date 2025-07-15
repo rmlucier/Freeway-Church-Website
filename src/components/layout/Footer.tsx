@@ -30,10 +30,16 @@ export default function Footer() {
             <p className="text-neutral-light-gray mb-4">Connect, Cultivate, Contribute</p>
             <div className="space-y-2 text-neutral-light-gray">
               <p>Every Sunday:</p>
-              <p>9:15a - Preservice Prayer</p>
-              <p>10:00a - Worship Service</p>
-              <p>11:30a - Fellowship</p>
-              <p>6:00p - Freeway Youth</p>
+              <p>9:15 AM - Pre-Service Prayer</p>
+              <p>10:00 AM - Main Worship Service</p>
+              <p>11:30 AM - Fellowship</p>
+              <p>6:00 PM - Youth</p>
+              <p>7:00 PM - Young Adults</p>
+            </div>
+            <div className="mt-4 space-y-1 text-neutral-light-gray">
+              <p>28900 B Drive North, Albion, MI 49224</p>
+              <p>Phone: (517) 798-0571</p>
+              <p>Email: <a href="mailto:info@freeway.church" className="hover:text-primary transition-colors">info@freeway.church</a></p>
             </div>
           </div>
 

@@ -82,6 +82,24 @@ Next.js website for Freeway Church with the following structure:
 For deployment, add these environment variables in Vercel dashboard:
 1. **Key**: `GOOGLE_CALENDAR_API_KEY` | **Value**: Your Google Calendar API key (regenerate in Google Cloud Console)
 2. **Key**: `GOOGLE_CALENDAR_ID` | **Value**: `c_md09veggphlh418qgt0vrr0420@group.calendar.google.com`
+
+### Church Contact Information
+- **Address**: 28900 B Drive North, Albion, MI 49224
+- **Phone**: (517) 798-0571
+- **General Email**: info@freeway.church
+- **Pastor Roy Email**: roy@freeway.church
+- **Pastor Elissa Email**: elissa@freeway.church
+
+### Service Times
+- **Sunday**: 9:15 AM - Pre-Service Prayer
+- **Sunday**: 10:00 AM - Main Worship Service
+- **Sunday**: 11:30 AM - Fellowship
+- **Sunday**: 6:00 PM - Youth
+- **Sunday**: 7:00 PM - Young Adults
+
+### Leadership
+- **Lead Pastor**: Roy Lucier
+- **Associate Pastor**: Elissa Lucier (Worship, Volunteer Management, Administration)
 - **Timezone**: America/Detroit
 
 ### Event Carousel Features
