@@ -8,26 +8,14 @@ const leaders = [
   {
     name: "Pastor Roy Lucier",
     role: "Lead Pastor",
-    image: "/images/church-event.jpeg",
+    image: "/images/royand Elissa.jpg",
     description: "Leading with absolute dynamic passion for our \"One More\" vision - connecting people to God, cultivating authentic disciples, and contributing to community transformation."
   },
   {
     name: "Elissa Lucier",
     role: "Associate Pastor",
-    image: "/images/church-event.jpeg",
+    image: "/images/royand Elissa.jpg",
     description: "Leading worship with passion and overseeing volunteer management and administrative operations. Elissa brings incredible energy to helping every person discover their purpose and serve with excellence."
-  },
-  {
-    name: "[Name]",
-    role: "Youth Pastor",
-    image: "/images/youth-ministry.jpg",
-    description: "Empowering the next generation to follow Jesus with purpose and passion, building tomorrow's leaders today."
-  },
-  {
-    name: "[Name]",
-    role: "Worship Leader",
-    image: "/images/sunday-service.jpeg",
-    description: "Creating an atmosphere where hearts connect with Heaven through authentic, Spirit-filled worship experiences."
   }
 ];
 
@@ -57,7 +45,7 @@ export default function Leadership() {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
           {leaders.map((leader, index) => (
             <motion.div
               key={leader.name}
