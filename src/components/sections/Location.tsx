@@ -57,7 +57,7 @@ export default function Location() {
             className="bg-neutral-dark-gray rounded-2xl overflow-hidden h-96"
           >
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2955.123456789!2d-84.5472!3d42.2439!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2s28900+B+Drive+North%2C+Albion%2C+MI+49224!5e0!3m2!1sen!2sus!4v1234567890"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2952.7176719045156!2d-84.74222922406433!3d42.26320137120203!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x883d45707c68ba07%3A0x6a66c4b94ee84f9e!2s28900%20B-Drive%20N%2C%20Albion%2C%20MI%2049224!5e0!3m2!1sen!2sus!4v1752604761348!5m2!1sen!2sus"
               width="100%"
               height="100%"
               style={{ border: 0 }}
