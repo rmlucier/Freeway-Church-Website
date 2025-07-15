@@ -12,8 +12,9 @@ const config: Config = {
         background: "var(--background)",
         foreground: "var(--foreground)",
         primary: {
-          DEFAULT: "#003366",
-          dark: "#004080",
+          DEFAULT: "#146FF8",
+          dark: "#0F5FD8",
+          light: "#3785FA",
         },
         accent: {
           teal: "#00BFFF",
@@ -23,10 +24,12 @@ const config: Config = {
         },
         neutral: {
           white: "#FFFFFF",
-          "off-white": "#F8F8F8",
-          "light-gray": "#F2F2F2",
+          "off-white": "#FAFAFA",
+          "light-gray": "#F5F5F5",
+          "medium-gray": "#E0E0E0",
           "dark-gray": "#333333",
-          "near-black": "#1A1A1A",
+          black: "#000000",
+          "near-black": "#0A0A0A",
         },
       },
       fontFamily: {

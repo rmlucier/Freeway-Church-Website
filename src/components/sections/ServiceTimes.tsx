@@ -17,7 +17,7 @@ export default function ServiceTimes() {
   });
 
   return (
-    <section className="py-16 md:py-24 bg-neutral-off-white">
+    <section className="py-16 md:py-24 bg-neutral-near-black">
       <div className="section-container">
         <motion.div
           ref={ref}
@@ -26,8 +26,8 @@ export default function ServiceTimes() {
           transition={{ duration: 0.6 }}
           className="text-center mb-12"
         >
-          <h2 className="text-section font-bold mb-4">Join Us This Sunday</h2>
-          <p className="text-xl text-neutral-dark-gray max-w-2xl mx-auto">
+          <h2 className="text-section font-bold mb-4 text-white">Join Us This Sunday</h2>
+          <p className="text-xl text-neutral-light-gray max-w-2xl mx-auto">
             We&apos;d love to see you! Here&apos;s what to expect when you visit Freeway Church.
           </p>
         </motion.div>
@@ -39,11 +39,11 @@ export default function ServiceTimes() {
               initial={{ opacity: 0, y: 30 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: index * 0.1 }}
-              className="card p-6 text-center"
+              className="bg-neutral-black p-6 text-center rounded-lg border border-neutral-dark-gray hover:border-primary transition-colors"
             >
-              <div className="text-accent-teal text-3xl font-bold mb-2">{service.time}</div>
-              <h3 className="text-xl font-semibold mb-2">{service.title}</h3>
-              <p className="text-neutral-dark-gray">{service.description}</p>
+              <div className="text-primary text-3xl font-bold mb-2">{service.time}</div>
+              <h3 className="text-xl font-semibold mb-2 text-white">{service.title}</h3>
+              <p className="text-neutral-light-gray">{service.description}</p>
             </motion.div>
           ))}
         </div>

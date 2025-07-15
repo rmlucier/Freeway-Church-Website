@@ -33,7 +33,7 @@ export default function EventsCarousel() {
   if (loading) {
     return (
       <div className="flex justify-center items-center h-64">
-        <div className="text-lg">Loading events...</div>
+        <div className="text-lg text-white">Loading events...</div>
       </div>
     );
   }
@@ -41,7 +41,7 @@ export default function EventsCarousel() {
   if (events.length === 0) {
     return (
       <div className="text-center py-12">
-        <p className="text-gray-600">No upcoming events found.</p>
+        <p className="text-neutral-light-gray">No upcoming events found.</p>
       </div>
     );
   }

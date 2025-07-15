@@ -45,7 +45,7 @@ export default function Footer() {
                 <li key={link.name}>
                   <Link
                     href={link.href}
-                    className="text-neutral-light-gray hover:text-accent-teal transition-colors"
+                    className="text-neutral-light-gray hover:text-primary transition-colors"
                   >
                     {link.name}
                   </Link>
@@ -65,14 +65,14 @@ export default function Footer() {
                       href={link.href}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-neutral-light-gray hover:text-accent-teal transition-colors"
+                      className="text-neutral-light-gray hover:text-primary transition-colors"
                     >
                       {link.name}
                     </a>
                   ) : (
                     <Link
                       href={link.href}
-                      className="text-neutral-light-gray hover:text-accent-teal transition-colors"
+                      className="text-neutral-light-gray hover:text-primary transition-colors"
                     >
                       {link.name}
                     </Link>

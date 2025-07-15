@@ -12,11 +12,11 @@ export default function Home() {
       <Header />
       <main>
         <Hero />
-        <section className="py-16 md:py-24 bg-gray-50">
+        <section className="py-16 md:py-24 bg-neutral-black">
           <div className="section-container">
             <div className="text-center mb-12">
-              <h2 className="text-section font-bold mb-4">Around Freeway Church</h2>
-              <p className="text-lg text-neutral-dark-gray max-w-2xl mx-auto">
+              <h2 className="text-section font-bold mb-4 text-white">Around Freeway Church</h2>
+              <p className="text-lg text-neutral-light-gray max-w-2xl mx-auto">
                 Stay connected with upcoming events, services, and opportunities to grow in your faith journey.
               </p>
             </div>

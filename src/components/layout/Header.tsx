@@ -26,15 +26,13 @@ export default function Header() {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? "bg-white shadow-md" : "bg-transparent"
-      }`}
+      className="fixed top-0 left-0 right-0 z-50 bg-neutral-black shadow-md"
     >
       <nav className="section-container">
         <div className="flex items-center justify-between h-16 md:h-20">
           <Link href="/" className="flex items-center">
             <Image
-              src={isScrolled ? "/images/logo-black.png" : "/images/logo-white-horizontal.png"}
+              src="/images/logo-white-horizontal.png"
               alt="Freeway Church"
               width={200}
               height={50}
@@ -48,9 +46,7 @@ export default function Header() {
               <Link
                 key={item.name}
                 href={item.href}
-                className={`font-medium transition-colors ${
-                  isScrolled ? "text-neutral-dark-gray hover:text-primary" : "text-white hover:text-neutral-light-gray"
-                }`}
+                className="font-medium transition-colors text-white hover:text-primary"
               >
                 {item.name}
               </Link>
@@ -72,18 +68,18 @@ export default function Header() {
                   rotate: isMobileMenuOpen ? 45 : 0,
                   y: isMobileMenuOpen ? 8 : 0,
                 }}
-                className={`w-full h-0.5 ${isScrolled ? "bg-neutral-dark-gray" : "bg-white"} transition-colors`}
+                className="w-full h-0.5 bg-white transition-colors"
               />
               <motion.span
                 animate={{ opacity: isMobileMenuOpen ? 0 : 1 }}
-                className={`w-full h-0.5 ${isScrolled ? "bg-neutral-dark-gray" : "bg-white"} transition-colors`}
+                className="w-full h-0.5 bg-white transition-colors"
               />
               <motion.span
                 animate={{
                   rotate: isMobileMenuOpen ? -45 : 0,
                   y: isMobileMenuOpen ? -8 : 0,
                 }}
-                className={`w-full h-0.5 ${isScrolled ? "bg-neutral-dark-gray" : "bg-white"} transition-colors`}
+                className="w-full h-0.5 bg-white transition-colors"
               />
             </div>
           </button>
@@ -96,14 +92,14 @@ export default function Header() {
             height: isMobileMenuOpen ? "auto" : 0,
             opacity: isMobileMenuOpen ? 1 : 0,
           }}
-          className="md:hidden overflow-hidden bg-white"
+          className="md:hidden overflow-hidden bg-neutral-black border-t border-neutral-dark-gray"
         >
           <div className="py-4 space-y-4">
             {navigation.map((item) => (
               <Link
                 key={item.name}
                 href={item.href}
-                className="block py-2 text-neutral-dark-gray hover:text-primary font-medium"
+                className="block py-2 text-white hover:text-primary font-medium"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 {item.name}

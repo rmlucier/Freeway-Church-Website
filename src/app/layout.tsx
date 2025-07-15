@@ -16,6 +16,7 @@ const openSans = Open_Sans({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://freeway.church'),
   title: "Freeway Church - Connect, Cultivate, Contribute",
   description: "Welcome to Freeway Church. Join us for worship services every Sunday at 10am. Connect with God and community, cultivate spiritual growth, and contribute to the world around you.",
   keywords: "Freeway Church, church, worship, community, faith, Sunday service",

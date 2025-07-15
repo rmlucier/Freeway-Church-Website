@@ -28,17 +28,29 @@ function generateDefaultImage(title: string): string {
   const lowerTitle = title.toLowerCase();
   
   if (lowerTitle.includes('service') || lowerTitle.includes('worship')) {
-    return '/images/sunday-service.jpg';
+    return '/images/sunday-service.jpeg';
   } else if (lowerTitle.includes('youth') || lowerTitle.includes('teen')) {
-    return '/images/youth-group.jpg';
+    return '/images/youth-ministry.jpg';
+  } else if (lowerTitle.includes('women') || lowerTitle.includes("women's") || lowerTitle.includes('ladies')) {
+    return '/images/womens-ministry.jpeg';
+  } else if (lowerTitle.includes('kidsway') || lowerTitle.includes('kids') || lowerTitle.includes('children')) {
+    return '/images/freewaychurchkidsway.jpeg';
   } else if (lowerTitle.includes('bible') || lowerTitle.includes('study')) {
-    return '/images/bible-study.jpg';
+    return '/images/bible-study.jpeg';
   } else if (lowerTitle.includes('prayer')) {
-    return '/images/prayer.jpg';
+    return '/images/prayer.jpeg';
   } else if (lowerTitle.includes('music') || lowerTitle.includes('choir')) {
-    return '/images/music.jpg';
+    return '/images/music.jpeg';
+  } else if (lowerTitle.includes('teaching') || lowerTitle.includes('sermon') || lowerTitle.includes('message')) {
+    return '/images/teaching.jpeg';
+  } else if (lowerTitle.includes('fellowship') || lowerTitle.includes('meal') || lowerTitle.includes('dinner')) {
+    return '/images/fellowship.jpeg';
+  } else if (lowerTitle.includes('family') || lowerTitle.includes('picnic')) {
+    return '/images/family-event.jpeg';
+  } else if (lowerTitle.includes('volunteer') || lowerTitle.includes('serve')) {
+    return '/images/volunteer.jpeg';
   } else {
-    return '/images/church-event.jpg';
+    return '/images/church-event.jpeg';
   }
 }
 
@@ -74,7 +86,7 @@ function getMockEvents(): CalendarEvent[] {
   ];
 }
 
-export async function GET() {
+export async function GET(request: Request) {
   try {
     if (!API_KEY) {
       console.warn('Google Calendar API key not configured, using mock data');
@@ -94,6 +106,8 @@ export async function GET() {
       singleEvents: true,
       orderBy: 'startTime',
       maxResults: 10,
+      timeZone: 'America/Detroit',
+      key: API_KEY,
     });
 
     const events = response.data.items || [];

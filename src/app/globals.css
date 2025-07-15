@@ -5,8 +5,8 @@
 
 @layer base {
   :root {
-    --background: #ffffff;
-    --foreground: #1a1a1a;
+    --background: #000000;
+    --foreground: #ffffff;
   }
 
   html {
@@ -14,26 +14,26 @@
   }
 
   body {
-    @apply font-body text-neutral-dark-gray;
+    @apply font-body text-neutral-white bg-neutral-black;
     line-height: 1.6;
   }
 
   h1, h2, h3, h4, h5, h6 {
-    @apply font-heading font-bold text-neutral-near-black;
+    @apply font-heading font-bold text-neutral-white;
   }
 }
 
 @layer components {
   .btn-primary {
-    @apply bg-accent-teal text-white px-6 py-3 rounded-button font-semibold 
-           transition-all duration-200 hover:bg-accent-teal-dark hover:shadow-button-hover
-           focus:outline-none focus:ring-2 focus:ring-accent-teal focus:ring-offset-2;
+    @apply bg-primary text-white px-6 py-3 rounded-button font-semibold 
+           transition-all duration-200 hover:bg-primary-dark hover:shadow-button-hover
+           focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2;
   }
 
   .btn-secondary {
-    @apply border-2 border-accent-teal text-accent-teal px-6 py-3 rounded-button 
-           font-semibold transition-all duration-200 hover:bg-accent-teal hover:text-white
-           focus:outline-none focus:ring-2 focus:ring-accent-teal focus:ring-offset-2;
+    @apply border-2 border-white text-white px-6 py-3 rounded-button 
+           font-semibold transition-all duration-200 hover:bg-white hover:text-black
+           focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-black;
   }
 
   .section-container {
@@ -47,7 +47,7 @@
   /* Swiper navigation button styles */
   .events-carousel .swiper-button-next,
   .events-carousel .swiper-button-prev {
-    color: #2563eb;
+    color: #146FF8;
     background: white;
     border-radius: 50%;
     width: 44px;
