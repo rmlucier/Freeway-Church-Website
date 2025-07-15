@@ -5,34 +5,18 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Messages - Freeway Church",
-  description: "Listen to weekly messages from Freeway Church. Discover God's word through inspiring sermons and biblical teaching.",
+  description: "Watch weekly messages from Freeway Church. Discover God's word through inspiring sermons and biblical teaching.",
 };
 
+// You can update these with actual video IDs from your YouTube channel
 const recentMessages = [
   {
-    title: "Walking in Faith",
-    speaker: "Pastor [Name]",
-    date: "January 14, 2024",
-    series: "New Year, New Faith",
-    description: "Discover how to take steps of faith in the new year, trusting God's plan for your life.",
-    videoUrl: "/watch-online",
+    title: "Sunday Service",
+    date: "Most Recent",
+    videoId: "live", // This will show the most recent livestream
+    description: "Join us for worship and the Word as we gather together as a church family."
   },
-  {
-    title: "Love in Action",
-    speaker: "Pastor [Name]",
-    date: "January 7, 2024",
-    series: "New Year, New Faith",
-    description: "Learn how to put love into action through practical service and community engagement.",
-    videoUrl: "/watch-online",
-  },
-  {
-    title: "Hope for Tomorrow",
-    speaker: "Pastor [Name]",
-    date: "December 31, 2023",
-    series: "Christmas Joy",
-    description: "End the year with hope and anticipation for what God has in store for the future.",
-    videoUrl: "/watch-online",
-  },
+  // Add more specific messages here as needed with their YouTube video IDs
 ];
 
 export default function MessagesPage() {
@@ -41,88 +25,121 @@ export default function MessagesPage() {
       <Header />
       <main>
         {/* Hero Section */}
-        <section className="relative pt-24 pb-12 md:pt-32 md:pb-16 bg-primary-dark text-white">
-          <div className="section-container">
-            <h1 className="text-hero font-bold mb-4">Messages</h1>
-            <p className="text-xl max-w-3xl">
+        <section className="relative pt-32 pb-20 md:pt-40 md:pb-24 bg-neutral-black text-white">
+          <div className="absolute inset-0 bg-gradient-to-b from-black/20 to-black/60" />
+          <div className="section-container relative z-10">
+            <h1 className="text-5xl md:text-6xl font-normal mb-6 tracking-wide">
+              Messages & <span className="text-primary">Sermons</span>
+            </h1>
+            <p className="text-xl md:text-2xl max-w-4xl font-light leading-relaxed text-neutral-light-gray">
               Be encouraged and challenged through biblical teaching that applies to your everyday life.
             </p>
           </div>
         </section>
 
-        {/* Recent Messages */}
-        <section className="py-16 md:py-24">
+        {/* Live Stream Section */}
+        <section className="py-20 md:py-28 bg-neutral-black">
           <div className="section-container">
-            <h2 className="text-section font-bold mb-12 text-center">Recent Messages</h2>
+            <div className="text-center mb-12">
+              <h2 className="text-4xl md:text-5xl font-normal mb-6 text-white">
+                Latest <span className="text-primary">Message</span>
+              </h2>
+              <p className="text-xl text-neutral-light-gray max-w-3xl mx-auto">
+                Watch our most recent service or join us live every Sunday at 10:00 AM
+              </p>
+            </div>
             
-            <div className="space-y-8">
-              {recentMessages.map((message, index) => (
-                <div key={index} className="card p-6 md:p-8">
-                  <div className="flex flex-col md:flex-row md:items-center md:justify-between">
-                    <div className="flex-1">
-                      <div className="flex items-center text-sm text-neutral-dark-gray mb-2">
-                        <span>{message.date}</span>
-                        <span className="mx-2">•</span>
-                        <span>{message.speaker}</span>
-                        <span className="mx-2">•</span>
-                        <span className="text-accent-teal">{message.series}</span>
-                      </div>
-                      <h3 className="text-2xl font-bold mb-3">{message.title}</h3>
-                      <p className="text-neutral-dark-gray mb-4 md:mb-0">{message.description}</p>
-                    </div>
-                    <div className="flex space-x-4">
-                      <Link href={message.videoUrl} className="btn-primary">
-                        Watch
-                      </Link>
-                      <Link href="/media/podcast" className="btn-secondary">
-                        Listen
-                      </Link>
-                    </div>
-                  </div>
-                </div>
-              ))}
+            {/* YouTube Embed */}
+            <div className="max-w-5xl mx-auto">
+              <div className="relative pb-[56.25%] h-0 overflow-hidden rounded-2xl bg-neutral-dark-gray">
+                <iframe
+                  className="absolute top-0 left-0 w-full h-full"
+                  src="https://www.youtube.com/embed/live_stream?channel=UCRrCQnXSguf6UYfNQORCN3Q"
+                  title="Freeway Church Live Stream"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowFullScreen
+                />
+              </div>
+              
+              <div className="mt-8 text-center">
+                <a 
+                  href="https://www.youtube.com/@freewaymedia/streams" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="bg-primary text-white px-8 py-4 text-lg font-normal hover:bg-primary-dark transition-colors rounded-full inline-block"
+                >
+                  View All Past Messages
+                </a>
+              </div>
             </div>
           </div>
         </section>
 
-        {/* Message Series */}
-        <section className="py-16 md:py-24 bg-neutral-off-white">
+        {/* Additional Resources */}
+        <section className="py-20 md:py-28 bg-neutral-near-black">
           <div className="section-container">
-            <h2 className="text-section font-bold mb-12 text-center">Current Series</h2>
-            
             <div className="max-w-4xl mx-auto text-center">
-              <div className="card p-8">
-                <h3 className="text-3xl font-bold mb-4">New Year, New Faith</h3>
-                <p className="text-lg text-neutral-dark-gray mb-6">
-                  Start the year with fresh faith and renewed purpose. This series explores how to deepen 
-                  your relationship with God and live out His calling on your life.
-                </p>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <Link href="/watch-online" className="btn-primary">
-                    Watch Latest
-                  </Link>
-                  <Link href="/media/podcast" className="btn-secondary">
-                    Listen to Podcast
-                  </Link>
+              <h2 className="text-4xl md:text-5xl font-normal mb-12 text-white">
+                More Ways to <span className="text-primary">Connect</span>
+              </h2>
+              
+              <div className="grid md:grid-cols-2 gap-8">
+                <div className="bg-neutral-black rounded-2xl p-8 border border-neutral-dark-gray hover:border-primary transition-colors">
+                  <h3 className="text-2xl font-normal mb-4 text-primary">Podcast</h3>
+                  <p className="text-neutral-light-gray mb-6">
+                    Listen to our messages on the go. Available on all major podcast platforms.
+                  </p>
+                  <a 
+                    href="https://open.spotify.com/show/1ClBK7hZzOSyfFhQYjpjMo" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="text-primary hover:text-primary-dark transition-colors"
+                  >
+                    Listen on Spotify →
+                  </a>
+                </div>
+                
+                <div className="bg-neutral-black rounded-2xl p-8 border border-neutral-dark-gray hover:border-primary transition-colors">
+                  <h3 className="text-2xl font-normal mb-4 text-primary">YouTube Channel</h3>
+                  <p className="text-neutral-light-gray mb-6">
+                    Subscribe to our channel for weekly messages and special content.
+                  </p>
+                  <a 
+                    href="https://www.youtube.com/channel/UCRrCQnXSguf6UYfNQORCN3Q" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="text-primary hover:text-primary-dark transition-colors"
+                  >
+                    Subscribe on YouTube →
+                  </a>
                 </div>
               </div>
             </div>
           </div>
         </section>
 
-        {/* Stay Connected */}
-        <section className="py-16 md:py-24 bg-primary text-white">
+        {/* CTA Section */}
+        <section className="py-20 md:py-28 bg-primary text-white">
           <div className="section-container text-center">
-            <h2 className="text-section font-bold mb-4 text-white">Stay Connected</h2>
-            <p className="text-xl mb-8 max-w-2xl mx-auto text-neutral-light-gray">
-              Never miss a message. Subscribe to our podcast or watch live online every Sunday.
+            <h2 className="text-4xl md:text-5xl font-normal mb-8 text-white">
+              Join Us This Sunday
+            </h2>
+            <p className="text-xl md:text-2xl mb-12 max-w-4xl mx-auto text-white/90 font-light leading-relaxed">
+              Experience the message in person! We gather every Sunday at 10:00 AM for worship and the Word.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/media/podcast" className="btn-primary bg-accent-teal hover:bg-accent-teal-dark">
-                Subscribe to Podcast
+            <div className="flex flex-col sm:flex-row gap-6 justify-center">
+              <Link 
+                href="/about" 
+                className="bg-white text-primary px-10 py-4 text-lg font-normal hover:bg-neutral-off-white transition-colors rounded-full"
+              >
+                Plan Your Visit
               </Link>
-              <Link href="/watch-online" className="btn-secondary border-white text-white hover:bg-white hover:text-primary">
-                Watch Live
+              <Link 
+                href="/watch-online" 
+                className="border-2 border-white text-white px-10 py-4 text-lg font-normal hover:bg-white hover:text-primary transition-colors rounded-full"
+              >
+                Watch Live Online
               </Link>
             </div>
           </div>
