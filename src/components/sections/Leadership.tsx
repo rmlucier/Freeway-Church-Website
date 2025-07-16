@@ -8,13 +8,13 @@ const leaders = [
   {
     name: "Pastor Roy Lucier",
     role: "Lead Pastor",
-    image: "/images/royand Elissa.jpg",
+    image: "/images/RoyandElissa.jpg",
     description: "Leading with absolute dynamic passion for our \"One More\" vision - connecting people to God, cultivating authentic disciples, and contributing to community transformation."
   },
   {
     name: "Elissa Lucier",
     role: "Associate Pastor",
-    image: "/images/royand Elissa.jpg",
+    image: "/images/RoyandElissa.jpg",
     description: "Leading worship with passion and overseeing volunteer management and administrative operations. Elissa brings incredible energy to helping every person discover their purpose and serve with excellence."
   },
   {

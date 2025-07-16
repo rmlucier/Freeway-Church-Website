@@ -1,18 +1,13 @@
 import type { Metadata } from "next";
-import { Inter, Open_Sans } from "next/font/google";
+import { PT_Serif } from "next/font/google";
 import "./globals.css";
 import { Analytics } from "@vercel/analytics/react";
 
-const inter = Inter({
+const ptSerif = PT_Serif({
   subsets: ["latin"],
-  variable: "--font-inter",
+  variable: "--font-pt-serif",
   display: "swap",
-});
-
-const openSans = Open_Sans({
-  subsets: ["latin"],
-  variable: "--font-open-sans",
-  display: "swap",
+  weight: ["400", "700"],
 });
 
 export const metadata: Metadata = {
@@ -64,7 +59,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${inter.variable} ${openSans.variable}`}>
+    <html lang="en" className={ptSerif.variable}>
       <body className="antialiased">
         <script
           type="application/ld+json"
@@ -77,15 +72,17 @@ export default function RootLayout({
               "url": "https://freeway.church",
               "address": {
                 "@type": "PostalAddress",
-                "addressLocality": "Your City",
-                "addressRegion": "Your State",
-                "postalCode": "Your ZIP",
+                "streetAddress": "28900 B Drive North",
+                "addressLocality": "Albion",
+                "addressRegion": "MI",
+                "postalCode": "49224",
                 "addressCountry": "US"
               },
+              "telephone": "(517) 798-0571",
               "sameAs": [
-                "https://www.facebook.com/freewaychurch",
-                "https://www.instagram.com/freewaychurch",
-                "https://www.youtube.com/@freewaychurch"
+                "https://www.facebook.com/www.freeway.church",
+                "https://instagram.com/freeway.church",
+                "https://www.youtube.com/channel/UCRrCQnXSguf6UYfNQORCN3Q"
               ],
               "openingHours": "Su 09:15-12:00,18:00-19:30",
             }),

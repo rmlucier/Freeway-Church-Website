@@ -28,7 +28,7 @@ function generateDefaultImage(title: string): string {
   const lowerTitle = title.toLowerCase();
   
   if (lowerTitle.includes('sunday service') || lowerTitle.includes('worship service') || lowerTitle.includes('service') || lowerTitle.includes('worship')) {
-    return '/images/sunday-service.jpeg';
+    return '/images/FreewayBuilding.jpg';
   } else if (lowerTitle.includes('youth') || lowerTitle.includes('teen')) {
     return '/images/youth-ministry.jpg';
   } else if (lowerTitle.includes('women') || lowerTitle.includes("women's") || lowerTitle.includes('ladies')) {
@@ -63,7 +63,7 @@ function getMockEvents(): CalendarEvent[] {
       start: '2024-07-21T10:00:00',
       end: '2024-07-21T11:30:00',
       location: 'Main Sanctuary',
-      image: '/images/sunday-service.jpg'
+      image: '/images/FreewayBuilding.jpg'
     },
     {
       id: '2',
