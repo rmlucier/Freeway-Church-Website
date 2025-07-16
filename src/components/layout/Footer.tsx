@@ -40,6 +40,9 @@ export default function Footer() {
               <p>28900 B Drive North, Albion, MI 49224</p>
               <p>Phone: (517) 798-0571</p>
               <p>Email: <a href="mailto:info@freeway.church" className="hover:text-primary transition-colors">info@freeway.church</a></p>
+              <p>Pastor Roy: <a href="mailto:roy@freeway.church" className="hover:text-primary transition-colors">roy@freeway.church</a></p>
+              <p>Pastor Elissa: <a href="mailto:elissa@freeway.church" className="hover:text-primary transition-colors">elissa@freeway.church</a></p>
+              <p>Office: <a href="mailto:cindy@freeway.church" className="hover:text-primary transition-colors">cindy@freeway.church</a></p>
             </div>
           </div>
 

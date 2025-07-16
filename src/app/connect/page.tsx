@@ -54,7 +54,8 @@ export default function ConnectPage() {
             <p className="text-xl md:text-2xl max-w-4xl font-light leading-relaxed text-neutral-light-gray">
               I am so excited to help you find your place in the Freeway Church family! 
               There are incredible opportunities to Connect, Cultivate your faith, and 
-              Contribute to our &ldquo;One More&rdquo; vision.
+              Contribute to our &ldquo;One More&rdquo; vision. We believe everyone&apos;s 
+              invited to have their lives wrecked by Jesus!
             </p>
           </div>
         </section>
@@ -133,9 +134,12 @@ export default function ConnectPage() {
                       </div>
                       <div>
                         <h4 className="text-xl font-normal mb-2 text-white">Email</h4>
-                        <a href="mailto:info@freeway.church" className="text-neutral-light-gray text-lg hover:text-primary transition-colors">
-                          info@freeway.church
-                        </a>
+                        <div className="space-y-1">
+                          <p><a href="mailto:info@freeway.church" className="text-neutral-light-gray text-lg hover:text-primary transition-colors">info@freeway.church</a></p>
+                          <p><a href="mailto:roy@freeway.church" className="text-neutral-light-gray text-lg hover:text-primary transition-colors">roy@freeway.church</a></p>
+                          <p><a href="mailto:elissa@freeway.church" className="text-neutral-light-gray text-lg hover:text-primary transition-colors">elissa@freeway.church</a></p>
+                          <p><a href="mailto:cindy@freeway.church" className="text-neutral-light-gray text-lg hover:text-primary transition-colors">cindy@freeway.church</a></p>
+                        </div>
                       </div>
                     </div>
                     
@@ -186,7 +190,7 @@ export default function ConnectPage() {
                 Follow <span className="text-primary">Us</span>
               </h2>
               
-              <div className="grid md:grid-cols-3 gap-8">
+              <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
                 <div className="bg-neutral-near-black rounded-2xl p-8 border border-neutral-dark-gray hover:border-primary transition-colors">
                   <h3 className="text-2xl font-normal mb-4 text-primary">Instagram</h3>
                   <p className="text-neutral-light-gray mb-6">
@@ -214,6 +218,21 @@ export default function ConnectPage() {
                     className="text-primary hover:text-primary-dark transition-colors"
                   >
                     Like Our Page →
+                  </a>
+                </div>
+                
+                <div className="bg-neutral-near-black rounded-2xl p-8 border border-neutral-dark-gray hover:border-primary transition-colors">
+                  <h3 className="text-2xl font-normal mb-4 text-primary">Private Group</h3>
+                  <p className="text-neutral-light-gray mb-6">
+                    Join our private Facebook group for deeper community connection.
+                  </p>
+                  <a 
+                    href="https://www.facebook.com/groups/722209412006813" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="text-primary hover:text-primary-dark transition-colors"
+                  >
+                    Join Group →
                   </a>
                 </div>
                 
