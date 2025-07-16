@@ -9,9 +9,10 @@ const footerLinks = {
   ],
   media: [
     { name: "Events", href: "/events" },
+    { name: "Visit", href: "/visit" },
     { name: "Podcast", href: "https://open.spotify.com/show/1ClBK7hZzOSyfFhQYjpjMo", external: true },
     { name: "YouTube", href: "https://www.youtube.com/channel/UCRrCQnXSguf6UYfNQORCN3Q", external: true },
-    { name: "Watch Online", href: "https://www.youtube.com/@freewaymedia/streams", external: true },
+    { name: "Watch Online", href: "/watch-online" },
   ],
   social: [
     { name: "Instagram", href: "https://instagram.com/freeway.church", icon: "instagram" },

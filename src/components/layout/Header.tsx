@@ -8,7 +8,7 @@ import { motion } from "framer-motion";
 const navigation = [
   { name: "About Us", href: "/about" },
   { name: "Events", href: "/events" },
-  { name: "Messages", href: "/messages" },
+  { name: "Visit", href: "/visit" },
   { name: "Giving", href: "/give" },
 ];
 
@@ -52,9 +52,9 @@ export default function Header() {
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
               </Link>
             ))}
-            <a href="https://www.youtube.com/@freewaymedia/streams" target="_blank" rel="noopener noreferrer" className="bg-primary text-white px-6 py-3 rounded-sm font-normal text-lg hover:bg-primary-dark transition-colors">
+            <Link href="/watch-online" className="bg-primary text-white px-6 py-3 rounded-sm font-normal text-lg hover:bg-primary-dark transition-colors">
               Watch Online
-            </a>
+            </Link>
           </div>
 
           {/* Mobile Menu Button */}
@@ -106,15 +106,13 @@ export default function Header() {
                 {item.name}
               </Link>
             ))}
-            <a
-              href="https://www.youtube.com/@freewaymedia/streams"
-              target="_blank"
-              rel="noopener noreferrer"
+            <Link
+              href="/watch-online"
               className="bg-primary text-white px-6 py-3 rounded-sm font-normal text-lg hover:bg-primary-dark transition-colors inline-block mt-4"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               Watch Online
-            </a>
+            </Link>
           </div>
         </motion.div>
       </nav>
