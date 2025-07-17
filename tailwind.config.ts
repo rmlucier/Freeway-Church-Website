@@ -42,12 +42,22 @@ const config: Config = {
         },
       },
       fontFamily: {
-        heading: ['PT Serif', 'serif'],
-        body: ['PT Serif', 'serif'],
+        'brand-header': ['var(--font-inter)', 'Inter', 'sans-serif'],
+        'brand-subheader': ['var(--font-inter)', 'Inter', 'sans-serif'],
+        'brand-body': ['var(--font-inter)', 'Inter', 'sans-serif'],
+        sans: ['var(--font-inter)', 'Inter', 'sans-serif'],
       },
       fontSize: {
+        'brand-header': ['4rem', { lineHeight: '1.1' }],
+        'brand-subheader': ['1.5rem', { lineHeight: '1.3' }],
+        'brand-body': ['1rem', { lineHeight: '1.6' }],
         'hero': ['4rem', { lineHeight: '1.1' }],
         'section': ['3rem', { lineHeight: '1.2' }],
+      },
+      fontWeight: {
+        'extra-bold': '800',
+        'light': '300',
+        'normal': '400',
       },
       borderRadius: {
         'button': '0.5rem',

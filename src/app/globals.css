@@ -1,4 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -14,16 +13,37 @@
   }
 
   body {
-    @apply font-body text-neutral-white bg-neutral-black;
+    @apply font-brand-body text-neutral-white bg-neutral-black;
     line-height: 1.6;
   }
 
-  h1, h2, h3, h4, h5, h6 {
-    @apply font-heading font-bold text-neutral-white;
+  h1, h2 {
+    @apply font-brand-header font-extrabold text-neutral-white uppercase tracking-wider;
+  }
+
+  h3, h4 {
+    @apply font-brand-subheader font-light text-neutral-white uppercase tracking-widest;
+  }
+
+  h5, h6 {
+    @apply font-brand-body font-normal text-neutral-white;
   }
 }
 
 @layer components {
+  /* Brand Typography Utilities */
+  .brand-header {
+    @apply font-brand-header font-extrabold uppercase tracking-wider;
+  }
+  
+  .brand-subheader {
+    @apply font-brand-subheader font-light uppercase tracking-widest;
+  }
+  
+  .brand-body {
+    @apply font-brand-body font-normal;
+  }
+
   .btn-primary {
     @apply bg-primary text-white px-6 py-3 rounded-button font-semibold 
            transition-all duration-200 hover:bg-primary-dark hover:shadow-button-hover

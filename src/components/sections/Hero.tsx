@@ -7,7 +7,7 @@ export default function Hero() {
   return (
     <section className="relative h-screen min-h-[700px] flex items-center justify-center overflow-hidden">
       {/* Background Image */}
-      <div className="absolute inset-0 bg-neutral-black">
+      <div className="absolute inset-0 bg-neutral-near-black">
         <div 
           className="absolute inset-0 bg-cover bg-center"
           style={{

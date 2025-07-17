@@ -53,7 +53,7 @@ export default function Header() {
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-secondary-bright-teal transition-all duration-300 group-hover:w-full"></span>
               </Link>
             ))}
-            <Link href="/watch-online" className="bg-tertiary-gold text-primary-white px-6 py-3 rounded-sm font-normal text-lg hover:bg-tertiary-gold/80 transition-colors">
+            <Link href="/watch-online" className="bg-primary-white text-primary-black px-6 py-3 rounded-xl font-normal text-lg hover:bg-primary-light-gray transition-colors">
               Watch Online
             </Link>
           </div>
@@ -109,7 +109,7 @@ export default function Header() {
             ))}
             <Link
               href="/watch-online"
-              className="bg-tertiary-gold text-primary-white px-6 py-3 rounded-sm font-normal text-lg hover:bg-tertiary-gold/80 transition-colors inline-block mt-4"
+              className="bg-primary-white text-primary-black px-6 py-3 rounded-xl font-normal text-lg hover:bg-primary-light-gray transition-colors inline-block mt-4"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               Watch Online

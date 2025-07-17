@@ -22,26 +22,37 @@ export const brandColors = {
   },
 } as const;
 
-// Typography Configuration
+// Typography Configuration (Updated to use Inter as primary font)
 export const typography = {
   fonts: {
-    // Primary brand font (may need web alternatives)
-    usual: {
-      extraBold: 'Usual-ExtraBold, "Inter", -apple-system, BlinkMacSystemFont, sans-serif',
-      light: 'Usual-Light, "Inter", -apple-system, BlinkMacSystemFont, sans-serif',
-      regular: 'Usual-Regular, "Inter", -apple-system, BlinkMacSystemFont, sans-serif',
-    },
-    // Web-safe fallbacks
-    fallback: {
-      headers: '"Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
-      subheads: '"Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
-      body: '"Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
+    // Primary brand font - Using Inter as "Usual" is not available in Google Fonts
+    brand: {
+      header: '"Inter", -apple-system, BlinkMacSystemFont, sans-serif', // Extra Bold (800) + ALL CAPS
+      subheader: '"Inter", -apple-system, BlinkMacSystemFont, sans-serif', // Light (300) + ALL CAPS
+      body: '"Inter", -apple-system, BlinkMacSystemFont, sans-serif', // Regular (400)
     },
   },
   weights: {
-    extraBold: 800,
-    regular: 400,
-    light: 300,
+    extraBold: 800, // For headers
+    regular: 400,   // For body text
+    light: 300,     // For subheaders
+  },
+  styles: {
+    header: {
+      fontWeight: 800,
+      textTransform: 'uppercase' as const,
+      letterSpacing: '0.05em',
+    },
+    subheader: {
+      fontWeight: 300,
+      textTransform: 'uppercase' as const,
+      letterSpacing: '0.1em',
+    },
+    body: {
+      fontWeight: 400,
+      textTransform: 'none' as const,
+      letterSpacing: '0em',
+    },
   },
 } as const;
 
@@ -102,16 +113,16 @@ export const brandGuidelines = {
     print: 'horizontal.block',
   },
   typography: {
-    // Font usage hierarchy
-    h1: 'usual.extraBold',
-    h2: 'usual.extraBold',
-    h3: 'usual.regular',
-    h4: 'usual.regular',
-    h5: 'usual.regular',
-    h6: 'usual.regular',
-    subtitle: 'usual.light',
-    body: 'usual.regular',
-    caption: 'usual.light',
+    // Font usage hierarchy based on brand guide
+    h1: 'brand.header', // Inter Extra Bold (800) + ALL CAPS
+    h2: 'brand.header', // Inter Extra Bold (800) + ALL CAPS
+    h3: 'brand.subheader', // Inter Light (300) + ALL CAPS
+    h4: 'brand.subheader', // Inter Light (300) + ALL CAPS
+    h5: 'brand.body', // Inter Regular (400)
+    h6: 'brand.body', // Inter Regular (400)
+    subtitle: 'brand.subheader', // Inter Light (300) + ALL CAPS
+    body: 'brand.body', // Inter Regular (400)
+    caption: 'brand.body', // Inter Regular (400)
   },
   colors: {
     // Recommended color applications

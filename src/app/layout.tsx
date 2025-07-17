@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
-import { PT_Serif } from "next/font/google";
+import { Inter } from "next/font/google";
 import "./globals.css";
 import { Analytics } from "@vercel/analytics/react";
 
-const ptSerif = PT_Serif({
+const inter = Inter({
   subsets: ["latin"],
-  variable: "--font-pt-serif",
+  variable: "--font-inter",
   display: "swap",
-  weight: ["400", "700"],
+  weight: ["300", "400", "800"],
 });
 
 export const metadata: Metadata = {
@@ -59,7 +59,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={ptSerif.variable}>
+    <html lang="en" className={inter.variable}>
       <body className="antialiased">
         <script
           type="application/ld+json"

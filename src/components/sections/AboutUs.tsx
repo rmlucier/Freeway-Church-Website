@@ -11,20 +11,10 @@ export default function AboutUs() {
   });
 
   return (
-    <section className="relative py-20 md:py-32 overflow-hidden">
-      {/* Background Image */}
-      <div className="absolute inset-0">
-        <div 
-          className="absolute inset-0 bg-cover bg-center"
-          style={{
-            backgroundImage: `url('/images/sunday-service.jpeg')`,
-          }}
-        />
-        <div className="absolute inset-0 bg-black/60" />
-      </div>
+    <section className="py-20 md:py-32 bg-neutral-dark-gray">
 
       {/* Content */}
-      <div className="relative z-10 section-container">
+      <div className="section-container">
         <div className="max-w-4xl">
           <motion.div
             ref={ref}

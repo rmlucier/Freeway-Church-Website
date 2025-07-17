@@ -10,7 +10,7 @@ export default function Location() {
   });
 
   return (
-    <section className="py-20 md:py-28 bg-neutral-near-black">
+    <section className="py-20 md:py-28 bg-neutral-light-gray">
       <div className="section-container">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Content */}
@@ -20,19 +20,19 @@ export default function Location() {
             animate={inView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.8, ease: "easeOut" }}
           >
-            <h2 className="text-4xl md:text-5xl font-normal mb-8 text-white">
+            <h2 className="text-4xl md:text-5xl font-normal mb-8 text-neutral-black">
               Visit <span className="text-primary">Our Location</span>
             </h2>
-            <div className="space-y-6 text-neutral-light-gray">
+            <div className="space-y-6 text-neutral-dark-gray">
               <div>
-                <h3 className="text-xl font-semibold mb-2 text-white">Address</h3>
+                <h3 className="text-xl font-semibold mb-2 text-neutral-black">Address</h3>
                 <p className="text-lg">
                   28900 B Drive North<br />
                   Albion, MI 49224
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2 text-white">Service Times</h3>
+                <h3 className="text-xl font-semibold mb-2 text-neutral-black">Service Times</h3>
                 <div className="space-y-2">
                   <p><strong>Sunday:</strong> 9:15 AM - Pre-Service Prayer</p>
                   <p><strong>Sunday:</strong> 10:00 AM - Main Worship Service</p>
@@ -42,9 +42,9 @@ export default function Location() {
                 </div>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2 text-white">Contact</h3>
+                <h3 className="text-xl font-semibold mb-2 text-neutral-black">Contact</h3>
                 <p>Phone: (517) 798-0571</p>
-                <p>Email: <a href="mailto:info@freeway.church" className="hover:text-primary transition-colors">info@freeway.church</a></p>
+                <p>Email: <a href="mailto:info@freeway.church" className="text-secondary-bright-teal hover:text-primary transition-colors">info@freeway.church</a></p>
               </div>
             </div>
           </motion.div>

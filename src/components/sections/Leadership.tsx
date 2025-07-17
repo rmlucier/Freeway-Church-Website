@@ -28,13 +28,6 @@ const leaders = [
   }
 ];
 
-const boardMembers = [
-  { name: "Cindy Eagen", role: "Board Member" },
-  { name: "Bobby Lee", role: "Board Member" },
-  { name: "David Hoyt", role: "Board Member" },
-  { name: "Charlie Isham", role: "Board Member" },
-  { name: "Earl Eagen", role: "Board Member" }
-];
 
 export default function Leadership() {
   const { ref, inView } = useInView({
@@ -43,7 +36,7 @@ export default function Leadership() {
   });
 
   return (
-    <section className="py-20 md:py-28 bg-neutral-black">
+    <section className="py-20 md:py-28 bg-neutral-dark-gray">
       <div className="section-container">
         <motion.div
           ref={ref}
@@ -91,35 +84,6 @@ export default function Leadership() {
           ))}
         </div>
 
-        {/* Board Members Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6, delay: 0.3 }}
-          className="mt-20 text-center"
-        >
-          <h3 className="text-3xl md:text-4xl font-normal mb-8 text-white">
-            Our <span className="text-primary">Board</span>
-          </h3>
-          <p className="text-lg md:text-xl text-neutral-light-gray max-w-3xl mx-auto font-light leading-relaxed mb-12">
-            Our board serves in an advisory capacity to the Pastor and acts as the official board of the corporation. 
-            They meet monthly and are elected for alternating 3-year terms at our annual business meeting.
-          </p>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 max-w-4xl mx-auto">
-            {boardMembers.map((member, index) => (
-              <motion.div
-                key={member.name}
-                initial={{ opacity: 0, y: 20 }}
-                animate={inView ? { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 0.6, delay: 0.4 + index * 0.1 }}
-                className="bg-neutral-near-black rounded-lg p-4 border border-neutral-dark-gray hover:border-primary transition-all duration-300"
-              >
-                <h4 className="text-lg font-semibold mb-1 text-white">{member.name}</h4>
-                <p className="text-primary text-sm font-medium">{member.role}</p>
-              </motion.div>
-            ))}
-          </div>
-        </motion.div>
       </div>
     </section>
   );

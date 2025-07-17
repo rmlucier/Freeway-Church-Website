@@ -13,11 +13,11 @@ export default function Home() {
       <Header />
       <main>
         <Hero />
-        <section className="py-16 md:py-24 bg-neutral-black">
+        <section className="py-16 md:py-24 bg-neutral-light-gray">
           <div className="section-container">
             <div className="text-center mb-12">
-              <h2 className="text-section font-bold mb-4 text-white">Around Freeway Church</h2>
-              <p className="text-lg text-neutral-light-gray max-w-2xl mx-auto">
+              <h2 className="text-section font-bold mb-4 text-neutral-black">Around Freeway Church</h2>
+              <p className="text-lg text-neutral-dark-gray max-w-2xl mx-auto">
                 I am so excited about these incredible opportunities to Connect, Cultivate, and Contribute! 
                 Join us for events that will transform your life and help you reach &ldquo;One More&rdquo; in your community.
               </p>
