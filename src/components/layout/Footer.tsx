@@ -22,14 +22,14 @@ const footerLinks = {
 
 export default function Footer() {
   return (
-    <footer className="bg-neutral-near-black text-white">
+    <footer className="bg-primary-dark-gray text-primary-white">
       <div className="section-container py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Church Info */}
           <div className="col-span-1 md:col-span-2">
             <h3 className="text-2xl font-bold mb-4">Freeway Church</h3>
-            <p className="text-neutral-light-gray mb-4">Connect, Cultivate, Contribute</p>
-            <div className="space-y-2 text-neutral-light-gray">
+            <p className="text-primary-light-gray mb-4">Connect, Cultivate, Contribute</p>
+            <div className="space-y-2 text-primary-light-gray">
               <p>Every Sunday:</p>
               <p>9:15 AM - Pre-Service Prayer</p>
               <p>10:00 AM - Main Worship Service</p>
@@ -37,13 +37,13 @@ export default function Footer() {
               <p>6:00 PM - Youth</p>
               <p>7:00 PM - Young Adults</p>
             </div>
-            <div className="mt-4 space-y-1 text-neutral-light-gray">
+            <div className="mt-4 space-y-1 text-primary-light-gray">
               <p>28900 B Drive North, Albion, MI 49224</p>
               <p>Phone: (517) 798-0571</p>
-              <p>Email: <a href="mailto:info@freeway.church" className="hover:text-primary transition-colors">info@freeway.church</a></p>
-              <p>Pastor Roy: <a href="mailto:roy@freeway.church" className="hover:text-primary transition-colors">roy@freeway.church</a></p>
-              <p>Pastor Elissa: <a href="mailto:elissa@freeway.church" className="hover:text-primary transition-colors">elissa@freeway.church</a></p>
-              <p>Office: <a href="mailto:cindy@freeway.church" className="hover:text-primary transition-colors">cindy@freeway.church</a></p>
+              <p>Email: <a href="mailto:info@freeway.church" className="hover:text-secondary-bright-teal transition-colors">info@freeway.church</a></p>
+              <p>Pastor Roy: <a href="mailto:roy@freeway.church" className="hover:text-secondary-bright-teal transition-colors">roy@freeway.church</a></p>
+              <p>Pastor Elissa: <a href="mailto:elissa@freeway.church" className="hover:text-secondary-bright-teal transition-colors">elissa@freeway.church</a></p>
+              <p>Office: <a href="mailto:cindy@freeway.church" className="hover:text-secondary-bright-teal transition-colors">cindy@freeway.church</a></p>
             </div>
           </div>
 
@@ -57,7 +57,7 @@ export default function Footer() {
                     href={link.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-neutral-light-gray hover:text-primary transition-colors"
+                    className="text-primary-light-gray hover:text-secondary-bright-teal transition-colors"
                   >
                     {link.name}
                   </a>
@@ -77,14 +77,14 @@ export default function Footer() {
                       href={link.href}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-neutral-light-gray hover:text-primary transition-colors"
+                      className="text-primary-light-gray hover:text-secondary-bright-teal transition-colors"
                     >
                       {link.name}
                     </a>
                   ) : (
                     <Link
                       href={link.href}
-                      className="text-neutral-light-gray hover:text-primary transition-colors"
+                      className="text-primary-light-gray hover:text-secondary-bright-teal transition-colors"
                     >
                       {link.name}
                     </Link>
@@ -101,7 +101,7 @@ export default function Footer() {
                   href={link.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-neutral-light-gray hover:text-accent-teal transition-colors"
+                  className="text-primary-light-gray hover:text-secondary-bright-teal transition-colors"
                   aria-label={link.name}
                 >
                   <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
@@ -117,7 +117,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-12 pt-8 border-t border-neutral-dark-gray text-center text-neutral-light-gray">
+        <div className="mt-12 pt-8 border-t border-primary-dark-gray text-center text-primary-light-gray">
           <p>&copy; {new Date().getFullYear()} Freeway Church. All rights reserved.</p>
         </div>
       </div>

@@ -4,6 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
+import { logoPaths } from "@/styles/branding";
 
 const navigation = [
   { name: "About Us", href: "/about" },
@@ -26,13 +27,13 @@ export default function Header() {
 
   return (
     <header
-      className="fixed top-0 left-0 right-0 z-50 bg-neutral-black/95 backdrop-blur-sm border-b border-neutral-dark-gray/30"
+      className="fixed top-0 left-0 right-0 z-50 bg-primary-black/95 backdrop-blur-sm border-b border-primary-dark-gray/30"
     >
       <nav className="section-container">
         <div className="flex items-center justify-between h-20">
           <Link href="/" className="flex items-center">
             <Image
-              src="/images/logo-white-horizontal.png"
+              src={logoPaths.horizontal.outline.light}
               alt="Freeway Church"
               width={200}
               height={50}
@@ -46,13 +47,13 @@ export default function Header() {
               <Link
                 key={item.name}
                 href={item.href}
-                className="text-lg font-normal transition-colors text-white hover:text-primary relative group"
+                className="text-lg font-normal transition-colors text-primary-white hover:text-secondary-bright-teal relative group"
               >
                 {item.name}
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-secondary-bright-teal transition-all duration-300 group-hover:w-full"></span>
               </Link>
             ))}
-            <Link href="/watch-online" className="bg-primary text-white px-6 py-3 rounded-sm font-normal text-lg hover:bg-primary-dark transition-colors">
+            <Link href="/watch-online" className="bg-tertiary-gold text-primary-white px-6 py-3 rounded-sm font-normal text-lg hover:bg-tertiary-gold/80 transition-colors">
               Watch Online
             </Link>
           </div>
@@ -69,18 +70,18 @@ export default function Header() {
                   rotate: isMobileMenuOpen ? 45 : 0,
                   y: isMobileMenuOpen ? 8 : 0,
                 }}
-                className="w-full h-0.5 bg-white transition-colors"
+                className="w-full h-0.5 bg-primary-white transition-colors"
               />
               <motion.span
                 animate={{ opacity: isMobileMenuOpen ? 0 : 1 }}
-                className="w-full h-0.5 bg-white transition-colors"
+                className="w-full h-0.5 bg-primary-white transition-colors"
               />
               <motion.span
                 animate={{
                   rotate: isMobileMenuOpen ? -45 : 0,
                   y: isMobileMenuOpen ? -8 : 0,
                 }}
-                className="w-full h-0.5 bg-white transition-colors"
+                className="w-full h-0.5 bg-primary-white transition-colors"
               />
             </div>
           </button>
@@ -93,14 +94,14 @@ export default function Header() {
             height: isMobileMenuOpen ? "auto" : 0,
             opacity: isMobileMenuOpen ? 1 : 0,
           }}
-          className="md:hidden overflow-hidden bg-neutral-black border-t border-neutral-dark-gray"
+          className="md:hidden overflow-hidden bg-primary-black border-t border-primary-dark-gray"
         >
           <div className="py-6 space-y-6">
             {navigation.map((item) => (
               <Link
                 key={item.name}
                 href={item.href}
-                className="block py-3 text-lg text-white hover:text-primary font-normal border-b border-neutral-dark-gray/30 last:border-b-0"
+                className="block py-3 text-lg text-primary-white hover:text-secondary-bright-teal font-normal border-b border-primary-dark-gray/30 last:border-b-0"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 {item.name}
@@ -108,7 +109,7 @@ export default function Header() {
             ))}
             <Link
               href="/watch-online"
-              className="bg-primary text-white px-6 py-3 rounded-sm font-normal text-lg hover:bg-primary-dark transition-colors inline-block mt-4"
+              className="bg-tertiary-gold text-primary-white px-6 py-3 rounded-sm font-normal text-lg hover:bg-tertiary-gold/80 transition-colors inline-block mt-4"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               Watch Online

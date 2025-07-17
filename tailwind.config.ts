@@ -11,24 +11,33 @@ const config: Config = {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        // Primary Colors (80% usage) - Main brand colors
         primary: {
-          DEFAULT: "#d3b975",
-          dark: "#b8a160",
-          light: "#e0c688",
+          DEFAULT: "#333333", // Dark gray - main brand color
+          "dark-gray": "#333333",
+          "light-gray": "#CCCCCC",
+          black: "#000000",
+          white: "#FFFFFF",
         },
-        accent: {
-          gold: "#d3b975",
-          "gold-dark": "#b8a160",
-          orange: "#e8a25c",
-          blue: "#84a8c7",
+        // Secondary Colors (15% usage) - Accent and interaction colors
+        secondary: {
+          DEFAULT: "#003333", // Dark teal
+          "dark-teal": "#003333",
+          "bright-teal": "#006666",
         },
+        // Tertiary Colors (5% usage) - Special highlights and CTAs
+        tertiary: {
+          DEFAULT: "#996600", // Gold
+          gold: "#996600",
+        },
+        // Legacy neutral colors for gradual transition
         neutral: {
-          white: "#ffffff",
+          white: "#FFFFFF",
           "off-white": "#fafafa",
-          "light-gray": "#aba7a5",
+          "light-gray": "#CCCCCC",
           "medium-gray": "#808080",
-          "dark-gray": "#4a4a4a",
-          black: "#231f20",
+          "dark-gray": "#333333",
+          black: "#000000",
           "near-black": "#1a1617",
         },
       },
