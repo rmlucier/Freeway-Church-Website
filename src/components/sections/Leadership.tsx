@@ -23,7 +23,7 @@ const leaders = [
     name: "Jamie & Nate",
     role: "Freeway Youth Leaders",
     credentials: "Youth Ministry Team",
-    image: "/images/teaching.jpeg",
+    image: "/images/youth-leaders.jpg",
     description: "Passionately leading Freeway Youth to help the next generation discover their purpose in Christ and develop into tomorrow's leaders through dynamic worship, relevant teaching, and authentic community."
   }
 ];
