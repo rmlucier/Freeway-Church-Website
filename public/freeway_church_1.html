@@ -96,6 +96,13 @@
         .btn-hover:active {
             transform: scale(0.98);
         }
+        
+        .line-clamp-2 {
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
     </style>
 </head>
 <body class="min-h-screen bg-background text-foreground">
@@ -246,51 +253,12 @@
                 </p>
             </div>
             
-            <!-- Google Calendar Embed -->
-            <div class="max-w-4xl mx-auto mb-12">
-                <div class="bg-card border border-border rounded-lg p-8">
-                    <iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%23ffffff&ctz=America%2FDetroit&src=c_md09veggphlh418qgt0vrr0420%40group.calendar.google.com&color=%23039BE5" 
-                            style="border-width:0" 
-                            width="100%" 
-                            height="600" 
-                            frameborder="0" 
-                            scrolling="no"
-                            class="rounded-lg">
-                    </iframe>
-                </div>
-            </div>
-            
-            <!-- Featured Events -->
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8" id="featured-events">
-                <!-- Events will be populated from Google Calendar API -->
-                <div class="bg-card border border-border rounded-lg overflow-hidden card-hover">
-                    <img src="/images/youth-ministry.jpg" alt="Youth Night" class="w-full h-48 object-cover">
-                    <div class="p-6">
-                        <div class="text-sm text-church-blue font-medium mb-2">Friday, December 15</div>
-                        <h3 class="text-xl font-serif font-bold mb-2">Youth Night</h3>
-                        <p class="text-muted-foreground mb-4">Join us for an evening of worship, games, and fellowship designed especially for our youth.</p>
-                        <button class="text-church-blue hover:text-primary font-medium">Learn More →</button>
-                    </div>
-                </div>
-                
-                <div class="bg-card border border-border rounded-lg overflow-hidden card-hover">
-                    <img src="/images/sunday-service.jpeg" alt="Christmas Service" class="w-full h-48 object-cover">
-                    <div class="p-6">
-                        <div class="text-sm text-church-blue font-medium mb-2">Sunday, December 24</div>
-                        <h3 class="text-xl font-serif font-bold mb-2">Christmas Eve Service</h3>
-                        <p class="text-muted-foreground mb-4">Celebrate the birth of our Savior with special music and a message of hope.</p>
-                        <button class="text-church-blue hover:text-primary font-medium">Learn More →</button>
-                    </div>
-                </div>
-                
-                <div class="bg-card border border-border rounded-lg overflow-hidden card-hover">
-                    <img src="/images/volunteer.jpeg" alt="Community Outreach" class="w-full h-48 object-cover">
-                    <div class="p-6">
-                        <div class="text-sm text-church-blue font-medium mb-2">Saturday, January 13</div>
-                        <h3 class="text-xl font-serif font-bold mb-2">Community Outreach</h3>
-                        <p class="text-muted-foreground mb-4">Join us as we serve our local community with food distribution and fellowship.</p>
-                        <button class="text-church-blue hover:text-primary font-medium">Learn More →</button>
-                    </div>
+            <!-- Upcoming Events Row -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6" id="featured-events">
+                <!-- Events will be populated from Google Calendar API or show fallback message -->
+                <div class="col-span-full text-center py-12" id="events-loading">
+                    <i data-lucide="loader" class="h-8 w-8 text-muted-foreground mx-auto mb-4 animate-spin"></i>
+                    <p class="text-muted-foreground">Loading upcoming events...</p>
                 </div>
             </div>
         </div>
@@ -633,14 +601,38 @@
         async function loadUpcomingEvents() {
             try {
                 const now = new Date().toISOString();
-                const response = await fetch(`https://www.googleapis.com/calendar/v3/calendars/${CALENDAR_ID}/events?key=${API_KEY}&timeMin=${now}&maxResults=6&singleEvents=true&orderBy=startTime`);
+                const response = await fetch(`https://www.googleapis.com/calendar/v3/calendars/${CALENDAR_ID}/events?key=${API_KEY}&timeMin=${now}&maxResults=8&singleEvents=true&orderBy=startTime`);
                 const data = await response.json();
                 
-                if (data.items) {
+                if (data.items && data.items.length > 0) {
                     displayEvents(data.items);
+                } else {
+                    displayNoEventsMessage();
                 }
             } catch (error) {
                 console.error('Error loading calendar events:', error);
+                displayNoEventsMessage();
+            }
+        }
+        
+        function displayNoEventsMessage() {
+            const container = document.getElementById('featured-events');
+            if (!container) return;
+            
+            container.innerHTML = `
+                <div class="col-span-full text-center py-12">
+                    <i data-lucide="calendar" class="h-16 w-16 text-muted-foreground mx-auto mb-4"></i>
+                    <h3 class="text-xl font-serif font-bold mb-2">No Upcoming Events</h3>
+                    <p class="text-muted-foreground mb-6">Check back soon for new events and activities!</p>
+                    <p class="text-sm text-muted-foreground">
+                        Don't forget about our regular Sunday schedule:<br>
+                        9:15 AM Prayer • 10:00 AM Worship • 11:30 AM Fellowship • 6:00 PM Youth
+                    </p>
+                </div>
+            `;
+            // Re-initialize Lucide icons for the new content
+            if (typeof lucide !== 'undefined') {
+                lucide.createIcons();
             }
         }
         
@@ -684,16 +676,24 @@
             events.forEach(event => {
                 const startDate = new Date(event.start.dateTime || event.start.date);
                 const eventImage = generateEventImage(event.summary);
+                const eventTime = event.start.dateTime ? 
+                    startDate.toLocaleTimeString('en-US', { hour: 'numeric', minute: '2-digit', hour12: true }) : 
+                    'All Day';
+                
                 const eventHtml = `
                     <div class="bg-card border border-border rounded-lg overflow-hidden card-hover">
-                        <img src="${eventImage}" alt="${event.summary}" class="w-full h-48 object-cover">
-                        <div class="p-6">
-                            <div class="text-sm text-church-blue font-medium mb-2">
-                                ${startDate.toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })}
+                        <img src="${eventImage}" alt="${event.summary}" class="w-full h-40 object-cover">
+                        <div class="p-4">
+                            <div class="text-xs text-church-blue font-medium mb-1">
+                                ${startDate.toLocaleDateString('en-US', { weekday: 'short', month: 'short', day: 'numeric' })}
                             </div>
-                            <h3 class="text-xl font-serif font-bold mb-2">${event.summary}</h3>
-                            <p class="text-muted-foreground mb-4">${event.description || 'Join us for this special event.'}</p>
-                            <button class="text-church-blue hover:text-primary font-medium">Learn More →</button>
+                            <h3 class="text-lg font-serif font-bold mb-2 line-clamp-2">${event.summary}</h3>
+                            <div class="text-xs text-muted-foreground mb-3">
+                                ${eventTime}${event.location ? ' • ' + event.location : ''}
+                            </div>
+                            <p class="text-sm text-muted-foreground mb-3 line-clamp-2">
+                                ${(event.description || 'Join us for this special event.').substring(0, 80)}${event.description && event.description.length > 80 ? '...' : ''}
+                            </p>
                         </div>
                     </div>
                 `;
@@ -703,8 +703,8 @@
         
         // Load events when page loads
         document.addEventListener('DOMContentLoaded', function() {
-            // Uncomment the line below when you have your Google Calendar API set up
-            // loadUpcomingEvents();
+            // Try to load events from Google Calendar
+            loadUpcomingEvents();
             
             // Add intersection observer for animations
             const observerOptions = {
