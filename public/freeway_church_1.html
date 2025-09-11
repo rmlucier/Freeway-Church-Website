@@ -129,7 +129,7 @@
     </nav>
 
     <!-- Hero Section -->
-    <section id="home" class="relative min-h-screen flex items-center justify-center parallax-bg" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1438032005730-c779502df39b?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80');">
+    <section id="home" class="relative min-h-screen flex items-center justify-center parallax-bg" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('/images/FreewayBuilding.jpg');">
         <div class="text-center text-white max-w-4xl px-4 animate-fade-in-up">
             <h1 class="hero-title text-5xl md:text-7xl mb-6">Welcome Home to</h1>
             <h2 class="hero-title text-4xl md:text-6xl mb-8 text-church-gold">Freeway Church</h2>
@@ -241,7 +241,7 @@
             <!-- Google Calendar Embed -->
             <div class="max-w-4xl mx-auto mb-12">
                 <div class="bg-card border border-border rounded-lg p-8">
-                    <iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%23ffffff&ctz=America%2FLos_Angeles&src=YOUR_CALENDAR_ID&color=%23039BE5" 
+                    <iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%23ffffff&ctz=America%2FDetroit&src=c_md09veggphlh418qgt0vrr0420%40group.calendar.google.com&color=%23039BE5" 
                             style="border-width:0" 
                             width="100%" 
                             height="600" 
@@ -256,7 +256,7 @@
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8" id="featured-events">
                 <!-- Events will be populated from Google Calendar API -->
                 <div class="bg-card border border-border rounded-lg overflow-hidden card-hover">
-                    <img src="https://images.unsplash.com/photo-1511632765486-a01980e01a18?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Youth Night" class="w-full h-48 object-cover">
+                    <img src="/images/youth-ministry.jpg" alt="Youth Night" class="w-full h-48 object-cover">
                     <div class="p-6">
                         <div class="text-sm text-church-blue font-medium mb-2">Friday, December 15</div>
                         <h3 class="text-xl font-serif font-bold mb-2">Youth Night</h3>
@@ -266,7 +266,7 @@
                 </div>
                 
                 <div class="bg-card border border-border rounded-lg overflow-hidden card-hover">
-                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Christmas Service" class="w-full h-48 object-cover">
+                    <img src="/images/sunday-service.jpeg" alt="Christmas Service" class="w-full h-48 object-cover">
                     <div class="p-6">
                         <div class="text-sm text-church-blue font-medium mb-2">Sunday, December 24</div>
                         <h3 class="text-xl font-serif font-bold mb-2">Christmas Eve Service</h3>
@@ -276,7 +276,7 @@
                 </div>
                 
                 <div class="bg-card border border-border rounded-lg overflow-hidden card-hover">
-                    <img src="https://images.unsplash.com/photo-1559827260-dc66d52bef19?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Community Outreach" class="w-full h-48 object-cover">
+                    <img src="/images/volunteer.jpeg" alt="Community Outreach" class="w-full h-48 object-cover">
                     <div class="p-6">
                         <div class="text-sm text-church-blue font-medium mb-2">Saturday, January 13</div>
                         <h3 class="text-xl font-serif font-bold mb-2">Community Outreach</h3>
@@ -542,9 +542,9 @@
             });
         });
         
-        // Google Calendar API integration (replace with your API key and Calendar ID)
-        const CALENDAR_ID = 'YOUR_CALENDAR_ID@group.calendar.google.com';
-        const API_KEY = 'YOUR_GOOGLE_API_KEY';
+        // Google Calendar API integration
+        const CALENDAR_ID = 'c_md09veggphlh418qgt0vrr0420@group.calendar.google.com';
+        const API_KEY = 'YOUR_GOOGLE_API_KEY'; // This will be configured in deployment environment
         
         // Function to fetch and display upcoming events
         async function loadUpcomingEvents() {
@@ -561,6 +561,37 @@
             }
         }
         
+        // Function to map event titles to appropriate images
+        function generateEventImage(title) {
+            const lowerTitle = title.toLowerCase();
+            
+            if (lowerTitle.includes('sunday service') || lowerTitle.includes('worship service') || lowerTitle.includes('service') || lowerTitle.includes('worship')) {
+                return '/images/FreewayBuilding.jpg';
+            } else if (lowerTitle.includes('youth') || lowerTitle.includes('teen')) {
+                return '/images/youth-ministry.jpg';
+            } else if (lowerTitle.includes('women') || lowerTitle.includes("women's") || lowerTitle.includes('ladies')) {
+                return '/images/womens-ministry.jpeg';
+            } else if (lowerTitle.includes('kidsway') || lowerTitle.includes('kids') || lowerTitle.includes('children')) {
+                return '/images/freewaychurchkidsway.jpeg';
+            } else if (lowerTitle.includes('bible') || lowerTitle.includes('study')) {
+                return '/images/bible-study.jpeg';
+            } else if (lowerTitle.includes('prayer')) {
+                return '/images/prayer.jpeg';
+            } else if (lowerTitle.includes('music') || lowerTitle.includes('choir')) {
+                return '/images/music.jpeg';
+            } else if (lowerTitle.includes('teaching') || lowerTitle.includes('sermon') || lowerTitle.includes('message')) {
+                return '/images/teaching.jpeg';
+            } else if (lowerTitle.includes('fellowship') || lowerTitle.includes('meal') || lowerTitle.includes('dinner')) {
+                return '/images/fellowship.jpeg';
+            } else if (lowerTitle.includes('family') || lowerTitle.includes('picnic')) {
+                return '/images/family-event.jpeg';
+            } else if (lowerTitle.includes('volunteer') || lowerTitle.includes('serve')) {
+                return '/images/volunteer.jpeg';
+            } else {
+                return '/images/church-event.jpeg';
+            }
+        }
+        
         function displayEvents(events) {
             const container = document.getElementById('featured-events');
             if (!container) return;
@@ -569,9 +600,10 @@
             
             events.forEach(event => {
                 const startDate = new Date(event.start.dateTime || event.start.date);
+                const eventImage = generateEventImage(event.summary);
                 const eventHtml = `
                     <div class="bg-card border border-border rounded-lg overflow-hidden card-hover">
-                        <img src="${event.attachments && event.attachments[0] ? event.attachments[0].fileUrl : 'https://images.unsplash.com/photo-1511632765486-a01980e01a18?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'}" alt="${event.summary}" class="w-full h-48 object-cover">
+                        <img src="${eventImage}" alt="${event.summary}" class="w-full h-48 object-cover">
                         <div class="p-6">
                             <div class="text-sm text-church-blue font-medium mb-2">
                                 ${startDate.toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })}
