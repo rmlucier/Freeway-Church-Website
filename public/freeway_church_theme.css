@@ -1,0 +1,95 @@
+:root {
+  --background: oklch(0.9851 0.0100 108.3400);
+  --foreground: oklch(0.1448 0.0200 248.8900);
+  --card: oklch(1.0000 0 0);
+  --card-foreground: oklch(0.1448 0.0200 248.8900);
+  --popover: oklch(1.0000 0 0);
+  --popover-foreground: oklch(0.1448 0.0200 248.8900);
+  --primary: oklch(0.5555 0.1800 195.2000);
+  --primary-foreground: oklch(0.9851 0 0);
+  --secondary: oklch(0.9702 0.0200 108.3400);
+  --secondary-foreground: oklch(0.2046 0.0200 248.8900);
+  --muted: oklch(0.9702 0.0100 108.3400);
+  --muted-foreground: oklch(0.5486 0.0200 248.8900);
+  --accent: oklch(0.7200 0.1400 75.8500);
+  --accent-foreground: oklch(0.1448 0.0200 248.8900);
+  --destructive: oklch(0.5830 0.2387 28.4765);
+  --destructive-foreground: oklch(0.9702 0 0);
+  --border: oklch(0.9219 0.0100 108.3400);
+  --input: oklch(0.9219 0.0100 108.3400);
+  --ring: oklch(0.5555 0.1800 195.2000);
+  --chart-1: oklch(0.5555 0.1800 195.2000);
+  --chart-2: oklch(0.7200 0.1400 75.8500);
+  --chart-3: oklch(0.6800 0.1600 45.2000);
+  --chart-4: oklch(0.6200 0.1500 285.4000);
+  --chart-5: oklch(0.5800 0.1700 325.8000);
+  --sidebar: oklch(0.9851 0.0100 108.3400);
+  --sidebar-foreground: oklch(0.1448 0.0200 248.8900);
+  --sidebar-primary: oklch(0.5555 0.1800 195.2000);
+  --sidebar-primary-foreground: oklch(0.9851 0 0);
+  --sidebar-accent: oklch(0.7200 0.1400 75.8500);
+  --sidebar-accent-foreground: oklch(0.1448 0.0200 248.8900);
+  --sidebar-border: oklch(0.9219 0.0100 108.3400);
+  --sidebar-ring: oklch(0.5555 0.1800 195.2000);
+  --font-sans: 'Inter', sans-serif;
+  --font-serif: 'Merriweather', serif;
+  --font-mono: 'JetBrains Mono', monospace;
+  --radius: 0.5rem;
+  --shadow-2xs: 0 1px 2px 0px hsl(0 0% 0% / 0.05);
+  --shadow-xs: 0 1px 3px 0px hsl(0 0% 0% / 0.08);
+  --shadow-sm: 0 1px 3px 0px hsl(0 0% 0% / 0.10), 0 1px 2px -1px hsl(0 0% 0% / 0.10);
+  --shadow: 0 4px 6px -1px hsl(0 0% 0% / 0.10), 0 2px 4px -2px hsl(0 0% 0% / 0.10);
+  --shadow-md: 0 10px 15px -3px hsl(0 0% 0% / 0.10), 0 4px 6px -4px hsl(0 0% 0% / 0.10);
+  --shadow-lg: 0 20px 25px -5px hsl(0 0% 0% / 0.10), 0 8px 10px -6px hsl(0 0% 0% / 0.10);
+  --shadow-xl: 0 25px 50px -12px hsl(0 0% 0% / 0.25);
+  --shadow-2xl: 0 25px 50px -12px hsl(0 0% 0% / 0.25);
+  --tracking-normal: 0em;
+  --spacing: 0.25rem;
+
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+}
+
+/* Custom church-specific colors */
+:root {
+  --church-gold: oklch(0.7200 0.1400 75.8500);
+  --church-blue: oklch(0.5555 0.1800 195.2000);
+  --church-cream: oklch(0.9851 0.0100 108.3400);
+  --church-warm-gray: oklch(0.5486 0.0200 248.8900);
+}
+
+body {
+  font-family: var(--font-sans) !important;
+  background-color: hsl(var(--background)) !important;
+  color: hsl(var(--foreground)) !important;
+  line-height: 1.6 !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-serif) !important;
+  font-weight: 600 !important;
+  color: hsl(var(--primary)) !important;
+}
+
+.hero-title {
+  font-family: var(--font-serif) !important;
+  font-weight: 700 !important;
+  color: white !important;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.5) !important;
+}
+
+.church-accent {
+  color: hsl(var(--church-gold)) !important;
+}
+
+.church-primary {
+  background-color: hsl(var(--church-blue)) !important;
+  color: white !important;
+}
+
+.church-secondary {
+  background-color: hsl(var(--church-gold)) !important;
+  color: hsl(var(--foreground)) !important;
+}
