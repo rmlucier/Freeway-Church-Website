@@ -125,7 +125,7 @@ export default function FullPageHome() {
             </h1>
             <p className="text-xl md:text-2xl text-neutral-light-gray mb-8 max-w-3xl mx-auto">
               I am so excited about these incredible opportunities to Connect, Cultivate, and Contribute! 
-              Join the warmest community you'll ever meet.
+              Join the warmest community you&apos;ll ever meet.
             </p>
             <div className="space-y-4 md:space-y-0 md:space-x-6 md:flex md:items-center md:justify-center">
               <button
@@ -222,7 +222,7 @@ export default function FullPageHome() {
             <h2 className="text-4xl md:text-5xl font-brand-header mb-6">Join Us This Sunday</h2>
             <p className="text-lg text-neutral-light-gray mb-12">
               Every Sunday is absolutely dynamic! Come experience worship, teaching, and fellowship 
-              with the warmest community you'll ever meet.
+              with the warmest community you&apos;ll ever meet.
             </p>
 
             <div className="bg-gradient-to-br from-primary/10 to-primary/5 backdrop-blur-sm rounded-2xl p-8 border border-primary/20">
@@ -254,7 +254,7 @@ export default function FullPageHome() {
                 </div>
                 
                 <div className="space-y-4">
-                  <h3 className="text-2xl font-brand-subheader text-primary mb-4">Can't Make It?</h3>
+                  <h3 className="text-2xl font-brand-subheader text-primary mb-4">Can&apos;t Make It?</h3>
                   <p className="text-neutral-light-gray mb-4">
                     Watch our live stream every Sunday at 10:00 AM or catch up on past messages anytime.
                   </p>
@@ -397,7 +397,7 @@ export default function FullPageHome() {
                 <div className="bg-neutral-light-gray/10 rounded-xl p-4 flex items-center justify-center">
                   <p className="text-neutral-light-gray text-center">
                     Interactive Map<br />
-                    <span className="text-sm">Click "Get Directions" for navigation</span>
+                    <span className="text-sm">Click &quot;Get Directions&quot; for navigation</span>
                   </p>
                 </div>
               </div>
@@ -419,7 +419,7 @@ export default function FullPageHome() {
             <h2 className="text-4xl md:text-5xl font-brand-header mb-6">Give</h2>
             <p className="text-lg text-neutral-light-gray mb-12">
               Your generosity helps us continue our mission to Connect, Cultivate, and Contribute 
-              to God's kingdom and our community.
+              to God&apos;s kingdom and our community.
             </p>
 
             <div className="bg-gradient-to-br from-primary/10 to-primary/5 backdrop-blur-sm rounded-2xl p-8 border border-primary/20">
@@ -453,7 +453,7 @@ export default function FullPageHome() {
           >
             <h2 className="text-4xl md:text-5xl font-brand-header mb-6">Connect With Us</h2>
             <p className="text-lg text-neutral-light-gray mb-12">
-              Ready to take your next step? We'd love to connect with you and help you 
+              Ready to take your next step? We&apos;d love to connect with you and help you 
               find your place in our church family.
             </p>
 
