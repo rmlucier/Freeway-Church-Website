@@ -28,6 +28,21 @@
   h5, h6 {
     @apply font-brand-body font-normal text-neutral-white;
   }
+
+  /* Enhanced gradients for modern look */
+  .gradient-hero {
+    background: linear-gradient(135deg, #231f20 0%, #231f20 50%, rgba(211, 185, 117, 0.1) 100%);
+  }
+
+  .gradient-section {
+    background: linear-gradient(180deg, rgba(211, 185, 117, 0.05) 0%, transparent 100%);
+  }
+
+  .glassmorphism {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
 }
 
 @layer components {

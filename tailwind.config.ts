@@ -11,34 +11,19 @@ const config: Config = {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
-        // Primary Colors (80% usage) - Main brand colors
+        // Primary Colors - Freeway Church Gold
         primary: {
-          DEFAULT: "#333333", // Dark gray - main brand color
-          "dark-gray": "#333333",
-          "light-gray": "#CCCCCC",
-          black: "#000000",
-          white: "#FFFFFF",
+          DEFAULT: "#d3b975", // Warm gold
+          dark: "#b8a160",
+          light: "#e0c688",
         },
-        // Secondary Colors (15% usage) - Accent and interaction colors
-        secondary: {
-          DEFAULT: "#003333", // Dark teal
-          "dark-teal": "#003333",
-          "bright-teal": "#006666",
-        },
-        // Tertiary Colors (5% usage) - Special highlights and CTAs
-        tertiary: {
-          DEFAULT: "#996600", // Gold
-          gold: "#996600",
-        },
-        // Legacy neutral colors for gradual transition
+        // Neutral colors for backgrounds and text
         neutral: {
           white: "#FFFFFF",
-          "off-white": "#fafafa",
-          "light-gray": "#CCCCCC",
-          "medium-gray": "#808080",
-          "dark-gray": "#333333",
-          black: "#000000",
-          "near-black": "#1a1617",
+          "light-gray": "#f8f9fa",
+          "medium-gray": "#6c757d", 
+          "dark-gray": "#495057",
+          black: "#231f20", // Freeway Church dark background
         },
       },
       fontFamily: {
